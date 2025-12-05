@@ -1,0 +1,614 @@
+/* ================================================
+  CSS DASAR - CONTOH PEMBELAJARAN FUNDAMENTAL
+  ================================================
+
+  Penjelasan tentang CSS:
+  - CSS (Cascading Style Sheets) digunakan untuk styling halaman web
+  - Specificity: Semakin spesifik selector, semakin tinggi prioritasnya
+  - Inheritance: Beberapa properti CSS diturunkan dari parent ke child
+  - Cascade: Jika ada konflik, aturan terakhir yang menang (jika specificity sama)
+*/
+
+/* ================================================
+  RESET DAN BASE STYLING
+   ================================================ */
+
+/* Universal selector (*) - memiliki specificity terendah */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Membuat perhitungan ukuran lebih mudah */
+}
+
+/* Element selector - specificity rendah */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* ================================================
+  1. BACKGROUND STYLING - SEMUA OPSI FUNDAMENTAL
+   ================================================ */
+
+.main-header {
+  /* Background dengan warna solid */
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  
+  /* Background dengan gradient linear */
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+}
+
+.background-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.background-demo > div {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.bg-color {
+  /* Background color solid */
+  background-color: #e74c3c;
+}
+
+.bg-gradient {
+  /* Background gradient radial */
+  background: radial-gradient(circle, #9b59b6 0%, #8e44ad 100%);
+}
+
+.bg-image {
+  /* Background image dengan fallback color */
+  background-color: #34495e;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  background-size: 50px 50px;
+  background-repeat: repeat;
+}
+
+/* ================================================
+  2. TEXT STYLING - SEMUA OPSI FUNDAMENTAL
+   ================================================ */
+
+.text-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.text-demo p {
+  padding: 0.5rem;
+  background: white;
+  border-radius: 4px;
+  border-left: 4px solid #3498db;
+}
+
+.text-large {
+  /* Ukuran font besar */
+  font-size: 1.5em; /* em = relatif terhadap ukuran font parent */
+}
+
+.text-bold {
+  /* Font tebal */
+  font-weight: bold; /* atau font-weight: 700; */
+}
+
+.text-italic {
+  /* Font miring */
+  font-style: italic;
+}
+
+.text-underline {
+  /* Dekorasi teks - garis bawah */
+  text-decoration: underline;
+}
+
+.text-color-red {
+  /* Warna teks */
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.text-uppercase {
+  /* Transformasi teks menjadi huruf besar */
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Jarak antar huruf */
+}
+
+/* ================================================
+  3. BORDER STYLING - SEMUA OPSI FUNDAMENTAL
+   ================================================ */
+
+.border-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.border-demo > div {
+  flex: 1;
+  min-width: 150px;
+  padding: 1rem;
+  text-align: center;
+  background: white;
+  margin: 0.5rem 0;
+}
+
+.border-solid {
+  /* Border solid - garis penuh */
+  border: 3px solid #3498db;
+}
+
+.border-dashed {
+  /* Border dashed - garis putus-putus */
+  border: 3px dashed #e67e22;
+}
+
+.border-dotted {
+  /* Border dotted - titik-titik */
+  border: 3px dotted #9b59b6;
+}
+
+.border-rounded {
+  /* Border dengan sudut melengkung */
+  border: 2px solid #2ecc71;
+  border-radius: 15px; /* px = unit absolut */
+}
+
+.border-thick {
+  /* Border tebal dengan warna berbeda per sisi */
+  border-top: 5px solid #e74c3c;
+  border-right: 5px solid #f39c12;
+  border-bottom: 5px solid #2ecc71;
+  border-left: 5px solid #9b59b6;
+}
+
+/* ================================================
+   4. LAYOUT STYLING - SEMUA OPSI FUNDAMENTAL
+   ================================================ */
+
+.layout-demo {
+  margin: 1rem 0;
+}
+
+.layout-flex {
+  /* Flexbox - layout modern untuk alignment */
+  display: flex;
+  justify-content: space-between; /* Distribusi horizontal */
+  align-items: center; /* Alignment vertikal */
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.flex-item {
+  /* Flex item properties */
+  flex: 1; /* Membagi ruang secara equal */
+  padding: 1rem;
+  background: #3498db;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  transition: transform 0.3s ease; /* Animasi smooth */
+}
+
+.flex-item:hover {
+  /* Pseudo-class :hover - interaksi user */
+  transform: translateY(-5px); /* Transform - menggeser posisi */
+}
+
+.layout-grid {
+  /* CSS Grid - layout modern untuk struktur 2D */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom dengan lebar sama */
+  grid-gap: 1rem; /* Jarak antar grid item */
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.grid-item {
+  padding: 1rem;
+  background: #e74c3c;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item:nth-child(even) {
+  /* Pseudo-class :nth-child - selector posisi */
+  background: #2ecc71;
+}
+
+.grid-item:hover {
+  background: #34495e;
+}
+
+/* ================================================
+   5. BOX MODEL - SEMUA OPSI FUNDAMENTAL
+   ================================================ */
+
+.boxmodel-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.boxmodel-demo > div {
+  background: white;
+  text-align: center;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.box-small {
+  /* Box model kecil - width, height, padding, margin */
+  width: 100px;
+  height: 100px;
+  padding: 10px; /* Ruang dalam */
+  margin: 10px;  /* Ruang luar */
+  border: 2px solid #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-medium {
+  /* Box model medium */
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  margin: 15px;
+  border: 3px solid #e67e22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-large {
+  /* Box model besar */
+  width: 200px;
+  height: 200px;
+  padding: 30px;
+  margin: 20px;
+  border: 4px solid #9b59b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-margin {
+  /* Contoh penggunaan margin yang berbeda per sisi */
+  width: 120px;
+  height: 80px;
+  background: #2ecc71;
+  margin-top: 30px;    /* Margin atas */
+  margin-right: 20px;  /* Margin kanan */
+  margin-bottom: 40px; /* Margin bawah */
+  margin-left: 10px;   /* Margin kiri */
+  /* Shorthand: margin: 30px 20px 40px 10px; (top right bottom left) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-padding {
+  /* Contoh penggunaan padding yang berbeda per sisi */
+  width: 120px;
+  height: 80px;
+  background: #e74c3c;
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 25px;
+  padding-left: 10px;
+  /* Shorthand: padding: 20px 15px 25px 10px; */
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================================
+   6. TYPOGRAPHY - SEMUA OPSI FUNDAMENTAL
+   ================================================ */
+
+.typography-demo {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.heading-1 {
+  /* Typography untuk heading 1 */
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Font serif */
+  font-size: 2.5rem; /* rem = relatif terhadap root font size */
+  font-weight: 300; /* Font tipis */
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.heading-2 {
+  /* Typography untuk heading 2 */
+  font-family: 'Arial', 'Helvetica', sans-serif; /* Font sans-serif */
+  font-size: 2rem;
+  font-weight: 600; /* Font semi-bold */
+  color: #34495e;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.paragraph-normal {
+  /* Typography untuk paragraf normal */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.8; /* Jarak antar baris */
+  color: #555;
+  margin-bottom: 1rem;
+  text-align: justify; /* Rata kiri-kanan */
+  text-indent: 2rem; /* Indentasi baris pertama */
+}
+
+.paragraph-monospace {
+  /* Typography untuk kode - font monospace */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #2c3e50;
+  background: #ecf0f1;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #3498db;
+  margin: 1rem 0;
+}
+
+.quote {
+  /* Typography untuk quote/kutipan */
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #7f8c8d;
+  border-left: 5px solid #bdc3c7;
+  padding-left: 2rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.quote::before {
+  /* Pseudo-element untuk tanda kutip */
+  content: '"';
+  font-size: 4rem;
+  color: #bdc3c7;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+  line-height: 1;
+}
+
+/* ================================================
+   SECTION DAN CONTAINER STYLING
+   ================================================ */
+
+.container {
+  max-width: 1200px; /* Lebar maksimum container */
+  margin: 0 auto; /* Center container */
+  padding: 0 2rem;
+}
+
+.demo-section {
+  background: white;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Shadow untuk depth */
+}
+
+.demo-section h2 {
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* ================================================
+   GROUP SELECTOR DAN KOMBINASI
+   ================================================ */
+
+/* Group selector - memilih multiple element sekaligus */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Descendant selector - memilih element di dalam element lain */
+.parent p {
+  color: #2980b9;
+  font-weight: 500;
+}
+
+/* Child selector (>) - memilih direct child saja */
+.parent > p {
+  background: #ecf0f1;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Class selector dengan descendant */
+.child p {
+  color: #27ae60;
+  font-style: italic;
+}
+
+/* Multiple class selector */
+.special-box.important {
+  background: linear-gradient(45deg, #ff6b6b, #feca57);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Adjacent sibling selector (+) */
+.highlight + p {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.highlight {
+  background: yellow;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #333;
+}
+
+.combination-demo {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.parent {
+  background: white;
+  padding: 1rem;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.child {
+  background: #e8f4fd;
+  padding: 1rem;
+  border: 1px solid #3498db;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+/* ================================================
+   FOOTER STYLING
+   ================================================ */
+
+.main-footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ================================================ */
+
+/* Untuk tablet */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .background-demo,
+  .border-demo {
+    flex-direction: column;
+  }
+  
+  .layout-flex {
+    flex-direction: column;
+  }
+  
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .boxmodel-demo {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Untuk mobile */
+@media (max-width: 480px) {
+  .heading-1 {
+    font-size: 2rem;
+  }
+  
+  .heading-2 {
+    font-size: 1.5rem;
+  }
+  
+  .demo-section {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .text-demo {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================================
+   KOMENTAR PEMBELAJARAN:
+   
+   1. SPECIFICITY (Kepentingan Selector):
+      - Inline styles (style="") = 1000 poin
+      - IDs (#myId) = 100 poin  
+      - Classes (.myClass), attributes, pseudo-classes = 10 poin
+      - Elements (div, p, h1) = 1 poin
+      - Universal (*) = 0 poin
+   
+   2. INHERITANCE (Pewarisan):
+      - Property seperti color, font-family diturunkan ke child
+      - Property seperti margin, padding TIDAK diturunkan
+      - Gunakan 'inherit' untuk memaksa pewarisan
+   
+   3. CASCADE (Urutan Prioritas):
+      - Jika specificity sama, aturan terakhir yang menang
+      - !important memiliki prioritas tertinggi (hindari penggunaan)
+   
+   4. BOX MODEL:
+      - Content: konten sesungguhnya
+      - Padding: ruang dalam (di dalam border)
+      - Border: garis tepi
+      - Margin: ruang luar (di luar border)
+   
+   5. UNITS (Satuan):
+      - px: absolut, tidak berubah
+      - em: relatif terhadap font-size parent
+      - rem: relatif terhadap font-size root
+      - %: persentase dari parent
+      - vh/vw: viewport height/width
+   
+   ================================================ */

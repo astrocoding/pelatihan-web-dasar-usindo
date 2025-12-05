@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Link dan Navigasi HTML</title>
+</head>
+<body>
+    <h1>Sampel Link dan Navigasi HTML</h1>
+    
+    <!-- BASIC LINKS -->
+    <h2>1. Link Dasar</h2>
+    
+    <h3>A. Link ke Website Eksternal</h3>
+    <p><a href="https://google.com">Kunjungi Google</a></p>
+    <p><a href="https://github.com">Kunjungi GitHub</a></p>
+    <p><a href="https://stackoverflow.com">Kunjungi Stack Overflow</a></p>
+    
+    <h3>B. Link ke File Lokal</h3>
+    <p><a href="1_text.html">Buka File 1_text.html</a></p>
+    <p><a href="2_list.html">Buka File 2_list.html</a></p>
+    <p><a href="../index.html">Kembali ke Halaman Utama</a></p>
+    
+    <hr>
+    
+    <!-- TARGET ATTRIBUTES -->
+    <h2>2. Atribut Target</h2>
+    
+    <h3>A. Target _blank (Buka Tab Baru)</h3>
+    <p><a href="https://youtube.com" target="_blank">Buka YouTube di Tab Baru</a></p>
+    <p><a href="1_text.html" target="_blank">Buka File Text di Tab Baru</a></p>
+    
+    <h3>B. Target _self (Default - Tab yang Sama)</h3>
+    <p><a href="https://wikipedia.org" target="_self">Buka Wikipedia di Tab yang Sama</a></p>
+    
+    <h3>C. Target _parent (Frame Parent)</h3>
+    <p><a href="https://example.com" target="_parent">Buka di Parent Frame</a></p>
+    
+    <h3>D. Target _top (Window Utama)</h3>
+    <p><a href="https://example.com" target="_top">Buka di Window Utama</a></p>
+    
+    <hr>
+    
+    <!-- EMAIL LINKS -->
+    <h2>3. Link Email (mailto)</h2>
+    
+    <h3>A. Email Sederhana</h3>
+    <p><a href="mailto:contoh@email.com">Kirim Email ke contoh@email.com</a></p>
+    
+    <h3>B. Email dengan Subject</h3>
+    <p><a href="mailto:admin@website.com?subject=Pertanyaan dari Website">Email dengan Subject</a></p>
+    
+    <h3>C. Email dengan Subject dan Body</h3>
+    <p><a href="mailto:support@company.com?subject=Bantuan&body=Halo, saya butuh bantuan dengan...">Email dengan Subject dan Body</a></p>
+    
+    <h3>D. Email dengan Multiple Recipients</h3>
+    <p><a href="mailto:user1@email.com,user2@email.com?subject=Meeting">Email ke Multiple Recipients</a></p>
+    
+    <h3>E. Email dengan CC dan BCC</h3>
+    <p><a href="mailto:primary@email.com?cc=copy@email.com&bcc=hidden@email.com&subject=Rapat Mingguan">Email dengan CC dan BCC</a></p>
+    
+    <hr>
+    
+    <!-- TELEPHONE LINKS -->
+    <h2>4. Link Telepon (tel)</h2>
+    
+    <h3>A. Nomor Telepon Sederhana</h3>
+    <p><a href="tel:+628123456789">Hubungi: +62 812-3456-789</a></p>
+    
+    <h3>B. Nomor Telepon dengan Format</h3>
+    <p><a href="tel:021-555-1234">Telepon Kantor: (021) 555-1234</a></p>
+    
+    <hr>
+    
+    <!-- ANCHOR LINKS (INTERNAL PAGE) -->
+    <h2>5. Link Anchor (Navigasi dalam Halaman)</h2>
+    
+    <h3>A. Navigasi ke Section dalam Halaman</h3>
+    <p><a href="#section1">Pergi ke Section 1</a></p>
+    <p><a href="#section2">Pergi ke Section 2</a></p>
+    <p><a href="#section3">Pergi ke Section 3</a></p>
+    <p><a href="#top">Kembali ke Atas</a></p>
+    
+    <h3>B. Link ke Anchor di File Lain</h3>
+    <p><a href="1_text.html#kesimpulan">Buka Kesimpulan di File Text</a></p>
+    <p><a href="2_list.html#unordered-list">Buka Section Unordered List</a></p>
+    
+    <hr>
+    
+    <!-- DOWNLOAD LINKS -->
+    <h2>6. Link Download</h2>
+    
+    <h3>A. Download dengan Atribut Download</h3>
+    <p><a href="dokumen.pdf" download>Download PDF</a></p>
+    <p><a href="gambar.jpg" download="foto-profil.jpg">Download Gambar (rename)</a></p>
+    
+    <h3>B. Download File dengan Target Blank</h3>
+    <p><a href="file.zip" target="_blank">Buka/Download ZIP File</a></p>
+    
+    <hr>
+    
+    <!-- SPECIAL ATTRIBUTES -->
+    <h2>7. Atribut Khusus</h2>
+    
+    <h3>A. Title Attribute (Tooltip)</h3>
+    <p><a href="https://google.com" title="Ini akan membuka halaman Google">Link dengan Tooltip</a></p>
+
+    <h3>B. Rel Attribute</h3>
+    <p><a href="https://external-site.com" rel="nofollow">Link Nofollow</a></p>
+    <p><a href="https://trusted-site.com" rel="noopener">Link Noopener</a></p>
+    <p><a href="https://external-site.com" rel="nofollow noopener">Link Nofollow + Noopener</a></p>
+    
+    <h3>C. Hreflang Attribute</h3>
+    <p><a href="https://example.com/en" hreflang="en">English Version</a></p>
+    <p><a href="https://example.com/id" hreflang="id">Versi Indonesia</a></p>
+    
+    <hr>
+    
+    <!-- JAVASCRIPT LINKS -->
+    <h2>8. Link dengan JavaScript</h2>
+    
+    <h3>A. JavaScript Alert</h3>
+    <p><a href="javascript:alert('Hello World!')">Klik untuk Alert</a></p>
+    
+    <h3>B. JavaScript Function</h3>
+    <p><a href="javascript:void(0)" onclick="alert('Tombol diklik!')">Link dengan OnClick</a></p>
+    
+    <h3>C. Prevent Default (Disabled Link)</h3>
+    <p><a href="#" onclick="return false;">Link yang Tidak Aktif</a></p>
+    
+    <hr>
+    
+    <!-- ACCESSIBILITY -->
+    <h2>9. Link untuk Accessibility</h2>
+    
+    <h3>A. ARIA Labels</h3>
+    <p><a href="https://facebook.com" aria-label="Kunjungi halaman Facebook kami">Facebook</a></p>
+    
+    <h3>B. Screen Reader Friendly</h3>
+    <p><a href="document.pdf">Download Laporan Tahunan <span>(file PDF, 2MB)</span></a></p>
+    
+    <hr>
+    
+    <!-- SECTIONS FOR ANCHOR DEMO -->
+    <div id="top"></div>
+    
+    <div id="section1">
+        <h2>Section 1 - Contoh Target Anchor</h2>
+        <p>Ini adalah section 1 yang bisa diakses dengan link anchor #section1</p>
+        <p><a href="#section2">Lanjut ke Section 2</a></p>
+    </div>
+    
+    <br><br><br>
+    
+    <div id="section2">
+        <h2>Section 2 - Target Anchor Kedua</h2>
+        <p>Ini adalah section 2 yang bisa diakses dengan link anchor #section2</p>
+        <p><a href="#section3">Lanjut ke Section 3</a></p>
+    </div>
+    
+    <br><br><br>
+    
+    <div id="section3">
+        <h2>Section 3 - Target Anchor Terakhir</h2>
+        <p>Ini adalah section 3 yang bisa diakses dengan link anchor #section3</p>
+        <p><a href="#top">Kembali ke Atas</a></p>
+    </div>
+    
+    <br><br><br>
+    
+    <!-- NAVIGATION EXAMPLE -->
+    <h2>10. Contoh Navigasi Website</h2>
+    
+    <nav>
+        <h3>Menu Navigasi:</h3>
+        <ul>
+            <li><a href="#top">Beranda</a></li>
+            <li><a href="#section1">Tentang Kami</a></li>
+            <li><a href="#section2">Layanan</a></li>
+            <li><a href="#section3">Kontak</a></li>
+            <li><a href="mailto:info@website.com">Email</a></li>
+            <li><a href="tel:+628123456789">Telepon</a></li>
+        </ul>
+    </nav>
+    
+    <hr>
+    
+    <h2>Kesimpulan</h2>
+    <p>Tag anchor (&lt;a&gt;) sangat fleksibel dan memiliki banyak atribut:</p>
+    <ul>
+        <li><strong>href</strong> - URL tujuan</li>
+        <li><strong>target</strong> - Cara membuka link</li>
+        <li><strong>title</strong> - Tooltip saat hover</li>
+        <li><strong>download</strong> - Untuk download file</li>
+        <li><strong>rel</strong> - Relasi dengan halaman tujuan</li>
+        <li><strong>hreflang</strong> - Bahasa halaman tujuan</li>
+    </ul>
+    
+    <p><em>Gunakan link dengan bijak untuk membuat navigasi yang user-friendly dan accessible.</em></p>
+    
+</body>
+</html>

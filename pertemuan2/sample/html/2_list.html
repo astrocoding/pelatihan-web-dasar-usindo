@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh List HTML - Unordered, Ordered, dan Description List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .example-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
+            background-color: #f9f9f9;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh Penggunaan List dalam HTML</h1>
+    
+    <!-- UNORDERED LIST SECTION -->
+    <h2>1. Unordered List (UL) - Bullet Points</h2>
+    
+    <h3>A. Unordered List Dasar</h3>
+    <div class="example-box">
+        <h4>Daftar Hobi Saya:</h4>
+        <ul>
+            <li>Membaca buku</li>
+            <li>Bermain game</li>
+            <li>Menonton film</li>
+            <li>Olahraga</li>
+        </ul>
+    </div>
+    
+    <h3>B. Unordered List dengan Style yang Berbeda</h3>
+    <div class="example-box">
+        <h4>Bullet Style: Circle</h4>
+        <ul style="list-style-type: circle;">
+            <li>Item dengan bullet circle</li>
+            <li>Item kedua</li>
+            <li>Item ketiga</li>
+        </ul>
+        
+        <h4>Bullet Style: Square</h4>
+        <ul style="list-style-type: square;">
+            <li>Item dengan bullet square</li>
+            <li>Item kedua</li>
+            <li>Item ketiga</li>
+        </ul>
+        
+        <h4>Tanpa Bullet (None)</h4>
+        <ul style="list-style-type: none;">
+            <li>Item tanpa bullet</li>
+            <li>Item kedua</li>
+            <li>Item ketiga</li>
+        </ul>
+    </div>
+    
+    <h3>C. Nested Unordered List (List Bersarang)</h3>
+    <div class="example-box">
+        <h4>Menu Makanan Favorit:</h4>
+        <ul>
+            <li>Makanan Indonesia
+                <ul>
+                    <li>Nasi Gudeg</li>
+                    <li>Rendang</li>
+                    <li>Gado-gado</li>
+                </ul>
+            </li>
+            <li>Makanan International
+                <ul>
+                    <li>Pizza Italia</li>
+                    <li>Sushi Jepang</li>
+                    <li>Burger Amerika</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <hr>
+    
+    <!-- ORDERED LIST SECTION -->
+    <h2>2. Ordered List (OL) - Numbered List</h2>
+    
+    <h3>A. Ordered List Dasar</h3>
+    <div class="example-box">
+        <h4>Langkah-langkah Membuat Kopi:</h4>
+        <ol>
+            <li>Siapkan air panas</li>
+            <li>Masukkan kopi bubuk ke dalam gelas</li>
+            <li>Tuang air panas ke dalam gelas</li>
+            <li>Aduk hingga rata</li>
+            <li>Tambahkan gula sesuai selera</li>
+            <li>Kopi siap disajikan</li>
+        </ol>
+    </div>
+    
+    <h3>B. Ordered List dengan Tipe Numbering Berbeda</h3>
+    <div class="example-box">
+        <h4>Numbering dengan Huruf Besar (A, B, C)</h4>
+        <ol type="A">
+            <li>Persiapan</li>
+            <li>Eksekusi</li>
+            <li>Evaluasi</li>
+        </ol>
+        
+        <h4>Numbering dengan Huruf Kecil (a, b, c)</h4>
+        <ol type="a">
+            <li>Tahap pertama</li>
+            <li>Tahap kedua</li>
+            <li>Tahap ketiga</li>
+        </ol>
+        
+        <h4>Numbering dengan Angka Romawi Besar (I, II, III)</h4>
+        <ol type="I">
+            <li>Pendahuluan</li>
+            <li>Isi</li>
+            <li>Penutup</li>
+        </ol>
+        
+        <h4>Numbering dengan Angka Romawi Kecil (i, ii, iii)</h4>
+        <ol type="i">
+            <li>Bagian satu</li>
+            <li>Bagian dua</li>
+            <li>Bagian tiga</li>
+        </ol>
+    </div>
+    
+    <h3>C. Ordered List dengan Start Value</h3>
+    <div class="example-box">
+        <h4>Daftar Ranking (dimulai dari nomor 5):</h4>
+        <ol start="5">
+            <li>Indonesia</li>
+            <li>Malaysia</li>
+            <li>Thailand</li>
+            <li>Singapura</li>
+            <li>Filipina</li>
+        </ol>
+    </div>
+    
+    <h3>D. Nested Ordered List</h3>
+    <div class="example-box">
+        <h4>Rencana Belajar Programming:</h4>
+        <ol>
+            <li>Frontend Development
+                <ol type="a">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ol>
+            </li>
+            <li>Backend Development
+                <ol type="a">
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>Node.js</li>
+                </ol>
+            </li>
+            <li>Database
+                <ol type="a">
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    
+    <hr>
+    
+    <!-- DESCRIPTION LIST SECTION -->
+    <h2>3. Description List (DL) - Definition List</h2>
+    
+    <h3>A. Description List Dasar</h3>
+    <div class="example-box">
+        <h4>Istilah-istilah Programming:</h4>
+        <dl>
+            <dt><strong>HTML</strong></dt>
+            <dd>HyperText Markup Language - bahasa markup untuk membuat struktur halaman web</dd>
+            
+            <dt><strong>CSS</strong></dt>
+            <dd>Cascading Style Sheets - bahasa untuk mengatur tampilan dan layout halaman web</dd>
+            
+            <dt><strong>JavaScript</strong></dt>
+            <dd>Bahasa pemrograman untuk membuat interaktivitas pada halaman web</dd>
+        </dl>
+    </div>
+    
+    <h3>B. Description List untuk FAQ</h3>
+    <div class="example-box">
+        <h4>Frequently Asked Questions:</h4>
+        <dl>
+            <dt>Apa itu HTML?</dt>
+            <dd>HTML adalah bahasa markup yang digunakan untuk membuat struktur dan konten halaman web. HTML menggunakan tag-tag untuk menandai berbagai elemen seperti heading, paragraf, link, dan gambar.</dd>
+            
+            <dt>Mengapa perlu belajar CSS?</dt>
+            <dd>CSS diperlukan untuk mengatur tampilan visual website, seperti warna, font, layout, dan animasi. Tanpa CSS, website akan terlihat polos dan tidak menarik.</dd>
+            
+            <dt>Apakah JavaScript sulit dipelajari?</dt>
+            <dd>JavaScript memiliki tingkat kesulitan menengah. Untuk pemula, disarankan untuk menguasai HTML dan CSS terlebih dahulu sebelum belajar JavaScript.</dd>
+        </dl>
+    </div>
+    
+    <h3>C. Description List untuk Profil</h3>
+    <div class="example-box">
+        <h4>Biodata Singkat:</h4>
+        <dl>
+            <dt>Nama Lengkap</dt>
+            <dd>John Doe</dd>
+            
+            <dt>Tempat, Tanggal Lahir</dt>
+            <dd>Jakarta, 15 Januari 1995</dd>
+            
+            <dt>Pendidikan Terakhir</dt>
+            <dd>S1 Teknik Informatika</dd>
+            
+            <dt>Pekerjaan</dt>
+            <dd>Web Developer</dd>
+            
+            <dt>Keahlian</dt>
+            <dd>HTML, CSS, JavaScript, PHP, MySQL</dd>
+            <dd>Photoshop, Figma</dd>
+            <dd>Git, Linux</dd>
+        </dl>
+    </div>
+    
+    <hr>
+    
+    <!-- MIXED LISTS -->
+    <h2>4. Kombinasi List (Mixed Lists)</h2>
+    
+    <div class="example-box">
+        <h4>Tutorial Lengkap Membuat Website:</h4>
+        <ol>
+            <li><strong>Persiapan</strong>
+                <ul>
+                    <li>Install text editor (VS Code, Sublime)</li>
+                    <li>Install browser modern (Chrome, Firefox)</li>
+                    <li>Siapkan folder project</li>
+                </ul>
+            </li>
+            
+            <li><strong>Pembuatan Struktur HTML</strong>
+                <dl>
+                    <dt>index.html</dt>
+                    <dd>File utama website</dd>
+                    <dt>style.css</dt>
+                    <dd>File untuk styling</dd>
+                    <dt>script.js</dt>
+                    <dd>File untuk JavaScript</dd>
+                </dl>
+            </li>
+            
+            <li><strong>Testing dan Deployment</strong>
+                <ol type="a">
+                    <li>Test di local browser</li>
+                    <li>Upload ke hosting</li>
+                    <li>Test di browser online</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    
+    <hr>
+    
+    <h2>Kesimpulan</h2>
+    <p>List dalam HTML sangat berguna untuk mengorganisir informasi. Gunakan:</p>
+    <ul>
+        <li><code>&lt;ul&gt;</code> untuk daftar tidak berurutan (bullet points)</li>
+        <li><code>&lt;ol&gt;</code> untuk daftar berurutan (numbered list)</li>
+        <li><code>&lt;dl&gt;</code> untuk daftar definisi (term dan description)</li>
+    </ul>
+    
+    <p><em>Tip: Anda bisa menggabungkan berbagai jenis list sesuai kebutuhan untuk membuat struktur informasi yang lebih kompleks dan mudah dipahami.</em></p>
+    
+</body>
+</html>

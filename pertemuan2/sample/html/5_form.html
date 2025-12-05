@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Form HTML</title>
+</head>
+<body>
+    <h1>Sampel Form HTML untuk Pemula</h1>
+    
+    <!-- FORM DASAR -->
+    <h2>1. Form Sederhana</h2>
+    
+    <form>
+        <label>Nama:</label>
+        <input type="text">
+        <br><br>
+        
+        <label>Password:</label>
+        <input type="password">
+        <br><br>
+        
+        <label>Pesan:</label>
+        <textarea></textarea>
+        <br><br>
+        
+        <button type="submit">Kirim</button>
+    </form>
+    
+    <hr>
+    
+    <!-- INPUT TYPES -->
+    <h2>2. Jenis-jenis Input</h2>
+    
+    <h3>A. Input Text</h3>
+    <form>
+        <label>Nama Lengkap:</label>
+        <input type="text">
+        <br><br>
+        
+        <label>Username:</label>
+        <input type="text">
+    </form>
+    
+    <h3>B. Input Password</h3>
+    <form>
+        <label>Password:</label>
+        <input type="password">
+        <br><br>
+        
+        <label>Konfirmasi Password:</label>
+        <input type="password">
+    </form>
+    
+    <h3>C. Input Email</h3>
+    <form>
+        <label>Email:</label>
+        <input type="email">
+    </form>
+    
+    <h3>D. Input Number</h3>
+    <form>
+        <label>Umur:</label>
+        <input type="number">
+        <br><br>
+        
+        <label>Harga:</label>
+        <input type="number">
+    </form>
+    
+    <h3>E. Input Date</h3>
+    <form>
+        <label>Tanggal Lahir:</label>
+        <input type="date">
+    </form>
+    
+    <hr>
+    
+    <!-- CHECKBOX AND RADIO -->
+    <h2>3. Checkbox dan Radio Button</h2>
+    
+    <h3>A. Checkbox (Bisa Pilih Banyak)</h3>
+    <form>
+        <label>Hobi:</label>
+        <br>
+        <input type="checkbox"> Membaca
+        <br>
+        <input type="checkbox"> Olahraga
+        <br>
+        <input type="checkbox"> Musik
+        <br>
+        <input type="checkbox"> Travelling
+    </form>
+    
+    <h3>B. Radio Button (Pilih Satu)</h3>
+    <form>
+        <label>Jenis Kelamin:</label>
+        <br>
+        <input type="radio" name="gender"> Laki-laki
+        <br>
+        <input type="radio" name="gender"> Perempuan
+        <br><br>
+        
+        <label>Pendidikan:</label>
+        <br>
+        <input type="radio" name="education"> SD
+        <br>
+        <input type="radio" name="education"> SMP
+        <br>
+        <input type="radio" name="education"> SMA
+        <br>
+        <input type="radio" name="education"> Kuliah
+    </form>
+    
+    <hr>
+    
+    <!-- SELECT AND TEXTAREA -->
+    <h2>4. Select dan Textarea</h2>
+    
+    <h3>A. Select (Dropdown)</h3>
+    <form>
+        <label>Kota:</label>
+        <select>
+            <option>Jakarta</option>
+            <option>Bandung</option>
+            <option>Surabaya</option>
+            <option>Medan</option>
+        </select>
+    </form>
+    
+    <h3>B. Textarea (Text Banyak Baris)</h3>
+    <form>
+        <label>Alamat:</label>
+        <br>
+        <textarea rows="3" cols="30"></textarea>
+        <br><br>
+        
+        <label>Komentar:</label>
+        <br>
+        <textarea rows="5" cols="40"></textarea>
+    </form>
+    
+    <hr>
+    
+    <!-- FILE INPUT -->
+    <h2>5. Upload File</h2>
+    
+    <form>
+        <label>Upload Foto:</label>
+        <input type="file">
+        <br><br>
+        
+        <label>Upload Dokumen:</label>
+        <input type="file">
+    </form>
+    
+    <hr>
+    
+    <!-- BUTTONS -->
+    <h2>6. Tombol-tombol</h2>
+    
+    <form>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Tombol Biasa</button>
+    </form>
+    
+    <hr>
+    
+    <!-- FORM LENGKAP SEDERHANA -->
+    <h2>7. Contoh Form Lengkap - Pendaftaran</h2>
+    
+    <form>
+        <h3>Form Pendaftaran</h3>
+        
+        <label>Nama Lengkap:</label>
+        <br>
+        <input type="text">
+        <br><br>
+        
+        <label>Email:</label>
+        <br>
+        <input type="email">
+        <br><br>
+        
+        <label>Password:</label>
+        <br>
+        <input type="password">
+        <br><br>
+        
+        <label>Tanggal Lahir:</label>
+        <br>
+        <input type="date">
+        <br><br>
+        
+        <label>Jenis Kelamin:</label>
+        <br>
+        <input type="radio" name="jk"> Laki-laki
+        <input type="radio" name="jk"> Perempuan
+        <br><br>
+        
+        <label>Kota:</label>
+        <br>
+        <select>
+            <option>Pilih Kota</option>
+            <option>Jakarta</option>
+            <option>Bandung</option>
+            <option>Surabaya</option>
+        </select>
+        <br><br>
+        
+        <label>Alamat:</label>
+        <br>
+        <textarea rows="3" cols="30"></textarea>
+        <br><br>
+        
+        <label>Upload Foto:</label>
+        <br>
+        <input type="file">
+        <br><br>
+        
+        <input type="checkbox"> Saya setuju dengan syarat dan ketentuan
+        <br><br>
+        
+        <button type="submit">Daftar</button>
+        <button type="reset">Bersihkan</button>
+    </form>
+    
+    <hr>
+    
+    <!-- FORM KONTAK SEDERHANA -->
+    <h2>8. Contoh Form Kontak</h2>
+    
+    <form>
+        <h3>Hubungi Kami</h3>
+        
+        <label>Nama:</label>
+        <br>
+        <input type="text">
+        <br><br>
+        
+        <label>Email:</label>
+        <br>
+        <input type="email">
+        <br><br>
+        
+        <label>Subjek:</label>
+        <br>
+        <select>
+            <option>Pilih Subjek</option>
+            <option>Pertanyaan</option>
+            <option>Keluhan</option>
+            <option>Saran</option>
+        </select>
+        <br><br>
+        
+        <label>Pesan:</label>
+        <br>
+        <textarea rows="5" cols="40"></textarea>
+        <br><br>
+        
+        <button type="submit">Kirim Pesan</button>
+    </form>
+    
+    <hr>
+    
+    <h2>Catatan Penting</h2>
+    
+    <h3>Tag-tag Form:</h3>
+    <ul>
+        <li><strong>&lt;form&gt;</strong> = Wadah formulir</li>
+        <li><strong>&lt;input&gt;</strong> = Input data</li>
+        <li><strong>&lt;label&gt;</strong> = Label untuk input</li>
+        <li><strong>&lt;textarea&gt;</strong> = Text area besar</li>
+        <li><strong>&lt;select&gt;</strong> = Dropdown</li>
+        <li><strong>&lt;option&gt;</strong> = Pilihan dalam select</li>
+        <li><strong>&lt;button&gt;</strong> = Tombol</li>
+    </ul>
+    
+    <h3>Jenis Input:</h3>
+    <ul>
+        <li><strong>text</strong> = Text biasa</li>
+        <li><strong>password</strong> = Password tersembunyi</li>
+        <li><strong>email</strong> = Email</li>
+        <li><strong>number</strong> = Angka</li>
+        <li><strong>date</strong> = Tanggal</li>
+        <li><strong>checkbox</strong> = Kotak centang</li>
+        <li><strong>radio</strong> = Pilihan bulat</li>
+        <li><strong>file</strong> = Upload file</li>
+    </ul>
+    
+</body>
+</html>
