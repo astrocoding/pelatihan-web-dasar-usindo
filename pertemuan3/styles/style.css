@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial';
+  color: yellow;
+}
+h1 {
+  color: green;
+}
+/* h3 {
+  font-family: 'Times New Roman';
+  color: purple;
+}
+h4 {
+  font-family: 'Times New Roman';
+  color: purple;
+} */
+
+h3, h4 {
+  font-family: 'Times New Roman';
+  color: purple;
+}
+
+p.p1 {
+  width: 300px;
+  background-color: #e07575;
+  text-align: center;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  padding: 50px 0;
+  /* border: 1px solid #1f6ca3; */
+  border-width: 2px;
+  border-style: solid;
+  border-color: #1f6ca3;
+  margin: 50px auto;
+}
+#myClass {
+  color: orange;
+}
+p.kelas {
+  color: magenta !important;
+}

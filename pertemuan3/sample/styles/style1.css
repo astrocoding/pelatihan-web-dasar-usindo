@@ -17,7 +17,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Membuat perhitungan ukuran lebih mudah */
+  box-sizing: border-box;
 }
 
 /* Element selector - specificity rendah */
@@ -51,7 +51,7 @@ body {
   margin: 1rem 0;
 }
 
-.background-demo > div {
+.background-demo > div { /* Selector untuk setiap div di dalam .background-demo */
   flex: 1;
   min-width: 200px;
   padding: 1rem;
@@ -179,7 +179,7 @@ body {
 }
 
 /* ================================================
-   4. LAYOUT STYLING - SEMUA OPSI FUNDAMENTAL
+  4. LAYOUT STYLING - SEMUA OPSI FUNDAMENTAL
    ================================================ */
 
 .layout-demo {
@@ -329,7 +329,7 @@ body {
 }
 
 /* ================================================
-   6. TYPOGRAPHY - SEMUA OPSI FUNDAMENTAL
+  6. TYPOGRAPHY - SEMUA OPSI FUNDAMENTAL
    ================================================ */
 
 .typography-demo {
@@ -408,7 +408,7 @@ body {
 }
 
 /* ================================================
-   SECTION DAN CONTAINER STYLING
+  SECTION DAN CONTAINER STYLING
    ================================================ */
 
 .container {
@@ -434,8 +434,16 @@ body {
 }
 
 /* ================================================
-   GROUP SELECTOR DAN KOMBINASI
+  GROUP SELECTOR DAN KOMBINASI
    ================================================ */
+
+
+h1 {
+  font-family: 'Arial', sans-serif;
+}
+h2 {
+  font-family: 'Arial', sans-serif;
+}
 
 /* Group selector - memilih multiple element sekaligus */
 h1, h2, h3, h4, h5, h6 {
@@ -513,7 +521,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ================================================
-   FOOTER STYLING
+  FOOTER STYLING
    ================================================ */
 
 .main-footer {
@@ -531,7 +539,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ================================================
-   RESPONSIVE DESIGN - MEDIA QUERIES
+  RESPONSIVE DESIGN - MEDIA QUERIES
    ================================================ */
 
 /* Untuk tablet */
@@ -580,35 +588,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ================================================
-   KOMENTAR PEMBELAJARAN:
-   
-   1. SPECIFICITY (Kepentingan Selector):
+  KOMENTAR PEMBELAJARAN:
+
+  1. SPECIFICITY (Kepentingan Selector):
       - Inline styles (style="") = 1000 poin
       - IDs (#myId) = 100 poin  
       - Classes (.myClass), attributes, pseudo-classes = 10 poin
       - Elements (div, p, h1) = 1 poin
       - Universal (*) = 0 poin
-   
-   2. INHERITANCE (Pewarisan):
+
+  2. INHERITANCE (Pewarisan):
       - Property seperti color, font-family diturunkan ke child
       - Property seperti margin, padding TIDAK diturunkan
       - Gunakan 'inherit' untuk memaksa pewarisan
-   
-   3. CASCADE (Urutan Prioritas):
+
+  3. CASCADE (Urutan Prioritas):
       - Jika specificity sama, aturan terakhir yang menang
       - !important memiliki prioritas tertinggi (hindari penggunaan)
-   
-   4. BOX MODEL:
+
+  4. BOX MODEL:
       - Content: konten sesungguhnya
       - Padding: ruang dalam (di dalam border)
       - Border: garis tepi
       - Margin: ruang luar (di luar border)
-   
-   5. UNITS (Satuan):
+
+  5. UNITS (Satuan):
       - px: absolut, tidak berubah
       - em: relatif terhadap font-size parent
       - rem: relatif terhadap font-size root
       - %: persentase dari parent
       - vh/vw: viewport height/width
-   
+
    ================================================ */
