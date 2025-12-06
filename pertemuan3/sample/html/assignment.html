@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penugasan CSS Styling - USINDO Training</title>
+    <link rel="stylesheet" href="../styles/assignment.css">
+</head>
+<body>
+    <header class="assignment-header">
+        <h1>Penugasan CSS Styling</h1>
+        <p>Latihan Praktik untuk Menguasai CSS</p>
+    </header>
+
+    <main class="assignment-container">
+        <!-- Instruksi Umum -->
+        <section class="instructions">
+            <h2>Instruksi Umum</h2>
+            <div class="instruction-box">
+                <ol>
+                    <li>Baca setiap tugas dengan teliti</li>
+                    <li>Buat file HTML dan CSS baru untuk setiap tugas</li>
+                    <li>Gunakan CSS Variables untuk nilai yang sering digunakan</li>
+                    <li>Pastikan kode Anda rapi dan terorganisir</li>
+                    <li>Test di browser untuk memastikan hasil sesuai</li>
+                    <li>Tambahkan komentar pada kode untuk penjelasan</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Tugas 1: CSS Variables & Color Scheme -->
+        <section class="task-section">
+            <div class="task-header">
+                <span class="task-number">Tugas 1</span>
+                <h2>CSS Variables & Color Scheme</h2>
+                <span class="difficulty easy">Mudah</span>
+            </div>
+            
+            <div class="task-content">
+                <h3>Objektif:</h3>
+                <p>Membuat sistem color scheme menggunakan CSS Variables</p>
+                
+                <h3>Tugas:</h3>
+                <ol>
+                    <li>Buat CSS Variables untuk color palette:
+                        <ul>
+                            <li>Primary color (biru)</li>
+                            <li>Secondary color (hijau)</li>
+                            <li>Accent color (merah/orange)</li>
+                            <li>Light, gray, dan dark colors</li>
+                        </ul>
+                    </li>
+                    <li>Buat variables untuk spacing (xs, sm, md, lg, xl)</li>
+                    <li>Buat variables untuk font sizes</li>
+                    <li>Buat 5 button dengan warna berbeda menggunakan variables</li>
+                    <li>Buat 3 card dengan spacing konsisten menggunakan variables</li>
+                </ol>
+
+                <h3>Tips:</h3>
+                <ul>
+                    <li>Gunakan <code>:root</code> untuk mendefinisikan variables</li>
+                    <li>Naming convention: <code>--primary-color</code>, <code>--spacing-md</code></li>
+                    <li>Gunakan <code>var(--nama-variable)</code> untuk mengakses nilai</li>
+                </ul>
+
+                <h3>Kriteria Penilaian:</h3>
+                <ul class="criteria">
+                    <li>Variables didefinisikan dengan benar</li>
+                    <li>Naming convention konsisten</li>
+                    <li>Warna dan spacing konsisten di seluruh design</li>
+                    <li>Mudah untuk mengubah theme dengan edit variables</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tugas 2: Background Styling -->
+        <section class="task-section">
+            <div class="task-header">
+                <span class="task-number">Tugas 2</span>
+                <h2>Background Styling Showcase</h2>
+                <span class="difficulty easy">Mudah</span>
+            </div>
+            
+            <div class="task-content">
+                <h3>Objektif:</h3>
+                <p>Membuat berbagai variasi background styling</p>
+                
+                <h3>Tugas:</h3>
+                <ol>
+                    <li>Buat 6 section dengan background berbeda:
+                        <ul>
+                            <li>Solid color background</li>
+                            <li>Linear gradient (minimal 2 warna)</li>
+                            <li>Radial gradient</li>
+                            <li>Linear gradient dengan multiple colors (3+ warna)</li>
+                            <li>Background pattern menggunakan gradient</li>
+                            <li>Background dengan opacity/transparency</li>
+                        </ul>
+                    </li>
+                    <li>Setiap section harus memiliki:
+                        <ul>
+                            <li>Minimum height 200px</li>
+                            <li>Teks yang kontras dengan background</li>
+                            <li>Border radius 10px</li>
+                            <li>Margin antar section</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Tips:</h3>
+                <ul>
+                    <li>Linear gradient: <code>linear-gradient(direction, color1, color2)</code></li>
+                    <li>Radial gradient: <code>radial-gradient(shape, color1, color2)</code></li>
+                    <li>Multiple gradients bisa dikombinasikan untuk pattern</li>
+                </ul>
+
+                <h3>Kriteria Penilaian:</h3>
+                <ul class="criteria">
+                    <li>Semua tipe background berhasil dibuat</li>
+                    <li>Warna harmonis dan tidak mengganggu mata</li>
+                    <li>Teks tetap mudah dibaca</li>
+                    <li>Layout rapi dan responsif</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tugas 3: Typography Portfolio -->
+        <section class="task-section">
+            <div class="task-header">
+                <span class="task-number">Tugas 3</span>
+                <h2>Typography Portfolio Page</h2>
+                <span class="difficulty medium">Sedang</span>
+            </div>
+            
+            <div class="task-content">
+                <h3>Objektif:</h3>
+                <p>Membuat halaman portfolio dengan fokus pada typography</p>
+                
+                <h3>Tugas:</h3>
+                <ol>
+                    <li>Buat halaman "About Me" dengan elemen:
+                        <ul>
+                            <li>Heading (h1) dengan font khusus dan text-shadow</li>
+                            <li>Subheading (h2) dengan letter-spacing</li>
+                            <li>Paragraf dengan line-height optimal (1.6-1.8)</li>
+                            <li>Quote dengan font-style italic dan border-left</li>
+                            <li>List dengan custom styling</li>
+                        </ul>
+                    </li>
+                    <li>Implementasikan:
+                        <ul>
+                            <li>Minimal 2 font family berbeda (heading vs body)</li>
+                            <li>Text alignment berbeda untuk tiap section</li>
+                            <li>Text transformation (uppercase untuk judul section)</li>
+                            <li>Text decoration untuk highlight text</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Tips:</h3>
+                <ul>
+                    <li>Gunakan Google Fonts untuk variasi font</li>
+                    <li>Line-height penting untuk readability</li>
+                    <li>Letter-spacing bagus untuk uppercase text</li>
+                    <li>Kontras warna text dengan background minimal 4.5:1</li>
+                </ul>
+
+                <h3>Kriteria Penilaian:</h3>
+                <ul class="criteria">
+                    <li>Font combination harmonis</li>
+                    <li>Hierarchy jelas (heading, subheading, body)</li>
+                    <li>Readability excellent</li>
+                    <li>Spacing konsisten</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tugas 4: Layout with Display Properties -->
+        <section class="task-section">
+            <div class="task-header">
+                <span class="task-number">Tugas 4</span>
+                <h2>Product Grid Layout</h2>
+                <span class="difficulty medium">Sedang</span>
+            </div>
+            
+            <div class="task-content">
+                <h3>Objektif:</h3>
+                <p>Membuat product grid menggunakan Flexbox dan Grid</p>
+                
+                <h3>Tugas:</h3>
+                <ol>
+                    <li>Buat Header dengan Flexbox:
+                        <ul>
+                            <li>Logo di kiri</li>
+                            <li>Navigation menu di kanan</li>
+                            <li>Menggunakan <code>display: flex</code> dan <code>justify-content: space-between</code></li>
+                        </ul>
+                    </li>
+                    <li>Buat Product Grid dengan CSS Grid:
+                        <ul>
+                            <li>Minimal 6 product cards</li>
+                            <li>3 kolom di desktop</li>
+                            <li>2 kolom di tablet</li>
+                            <li>1 kolom di mobile</li>
+                            <li>Gap konsisten antar items</li>
+                        </ul>
+                    </li>
+                    <li>Setiap Product Card berisi:
+                        <ul>
+                            <li>Image placeholder (gunakan background color)</li>
+                            <li>Product name</li>
+                            <li>Price</li>
+                            <li>Button "Add to Cart"</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Tips:</h3>
+                <ul>
+                    <li>Flexbox: <code>display: flex</code>, <code>justify-content</code>, <code>align-items</code></li>
+                    <li>Grid: <code>display: grid</code>, <code>grid-template-columns: repeat(3, 1fr)</code></li>
+                    <li>Media queries untuk responsive: <code>@media (max-width: 768px)</code></li>
+                    <li>Gap property untuk spacing yang konsisten</li>
+                </ul>
+
+                <h3>Kriteria Penilaian:</h3>
+                <ul class="criteria">
+                    <li>Header menggunakan Flexbox dengan benar</li>
+                    <li>Grid layout responsive di semua screen sizes</li>
+                    <li>Spacing konsisten</li>
+                    <li>Card design menarik dan konsisten</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tugas 5: Image Gallery -->
+        <section class="task-section">
+            <div class="task-header">
+                <span class="task-number">Tugas 5</span>
+                <h2>Stylish Image Gallery</h2>
+                <span class="difficulty medium">Sedang</span>
+            </div>
+            
+            <div class="task-content">
+                <h3>Objektif:</h3>
+                <p>Membuat image gallery dengan berbagai styling effects</p>
+                
+                <h3>Tugas:</h3>
+                <ol>
+                    <li>Buat gallery dengan 9 image placeholders</li>
+                    <li>Setiap image harus memiliki styling berbeda:
+                        <ul>
+                            <li>3 images dengan border-radius berbeda (0px, 15px, 50%)</li>
+                            <li>3 images dengan box-shadow berbeda</li>
+                            <li>3 images dengan filter effects (grayscale, blur, brightness)</li>
+                        </ul>
+                    </li>
+                    <li>Implementasikan hover effects:
+                        <ul>
+                            <li>Scale transform</li>
+                            <li>Filter berubah (grayscale → color)</li>
+                            <li>Shadow menjadi lebih besar</li>
+                            <li>Border muncul</li>
+                        </ul>
+                    </li>
+                    <li>Gunakan CSS Grid dengan 3 kolom</li>
+                </ol>
+
+                <h3>Tips:</h3>
+                <ul>
+                    <li>Image placeholder: gunakan div dengan background color gradient</li>
+                    <li>Aspect ratio: <code>aspect-ratio: 1/1</code> atau <code>padding-bottom: 100%</code></li>
+                    <li>Smooth transitions: <code>transition: all 0.3s ease</code></li>
+                    <li>Filter: <code>filter: grayscale(100%)</code></li>
+                </ul>
+
+                <h3>Kriteria Penilaian:</h3>
+                <ul class="criteria">
+                    <li>Semua styling effects berhasil diimplementasi</li>
+                    <li>Hover effects smooth dan menarik</li>
+                    <li>Grid layout rapi</li>
+                    <li>Responsive di berbagai screen size</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tugas 6: Positioning Challenge -->
+        <section class="task-section">
+            <div class="task-header">
+                <span class="task-number">Tugas 6</span>
+                <h2>Positioning Master Challenge</h2>
+                <span class="difficulty hard">Sulit</span>
+            </div>
+            
+            <div class="task-content">
+                <h3>Objektif:</h3>
+                <p>Membuat landing page dengan berbagai positioning techniques</p>
+                
+                <h3>Tugas:</h3>
+                <ol>
+                    <li>Buat Fixed Navigation Bar:
+                        <ul>
+                            <li>Selalu di top saat scroll</li>
+                            <li>Memiliki shadow untuk depth</li>
+                            <li>Background sedikit transparent</li>
+                        </ul>
+                    </li>
+                    <li>Buat Hero Section dengan:
+                        <ul>
+                            <li>Background image/gradient fullscreen</li>
+                            <li>Text centered menggunakan absolute positioning</li>
+                            <li>Button positioned di center</li>
+                        </ul>
+                    </li>
+                    <li>Buat Card Section dengan:
+                        <ul>
+                            <li>Badge positioned absolute di corner (NEW, SALE, dll)</li>
+                            <li>Icons positioned absolute di berbagai sudut card</li>
+                        </ul>
+                    </li>
+                    <li>Buat Sticky Sidebar:
+                        <ul>
+                            <li>Sticky saat scroll</li>
+                            <li>Berisi table of contents atau info</li>
+                        </ul>
+                    </li>
+                    <li>Buat Fixed Footer dengan Social Media Icons</li>
+                </ol>
+
+                <h3>Tips:</h3>
+                <ul>
+                    <li>Fixed nav: <code>position: fixed; top: 0; width: 100%; z-index: 1000;</code></li>
+                    <li>Center absolute: <code>top: 50%; left: 50%; transform: translate(-50%, -50%);</code></li>
+                    <li>Badge: parent <code>position: relative</code>, badge <code>position: absolute</code></li>
+                    <li>Sticky: <code>position: sticky; top: 100px;</code></li>
+                </ul>
+
+                <h3>Kriteria Penilaian:</h3>
+                <ul class="criteria">
+                    <li>Semua positioning types digunakan dengan benar</li>
+                    <li>Fixed navigation berfungsi sempurna</li>
+                    <li>Element positioning akurat</li>
+                    <li>Z-index dikelola dengan baik</li>
+                    <li>Tidak ada overlapping yang tidak diinginkan</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tugas 7: Interactive Components -->
+        <section class="task-section">
+            <div class="task-header">
+                <span class="task-number">Tugas 7</span>
+                <h2>Interactive UI Components</h2>
+                <span class="difficulty medium">Sedang</span>
+            </div>
+            
+            <div class="task-content">
+                <h3>Objektif:</h3>
+                <p>Membuat komponen UI interaktif dengan pseudo-classes</p>
+                
+                <h3>Tugas:</h3>
+                <ol>
+                    <li>Buat 5 Button Styles dengan hover & active:
+                        <ul>
+                            <li>Primary button (scale on hover)</li>
+                            <li>Secondary button (color change)</li>
+                            <li>Outline button (fill on hover)</li>
+                            <li>Gradient button (shift gradient)</li>
+                            <li>Icon button (rotate icon on hover)</li>
+                        </ul>
+                    </li>
+                    <li>Buat Navigation Menu dengan:
+                        <ul>
+                            <li>Link states: normal, hover, active</li>
+                            <li>Underline animation on hover</li>
+                            <li>Background color on active</li>
+                        </ul>
+                    </li>
+                    <li>Buat Form dengan:
+                        <ul>
+                            <li>Input dengan focus state (border & shadow)</li>
+                            <li>Input validation dengan :valid dan :invalid</li>
+                            <li>Disabled state untuk button</li>
+                        </ul>
+                    </li>
+                    <li>Buat Card Grid dengan:
+                        <ul>
+                            <li>Hover effects (lift up, shadow)</li>
+                            <li>:nth-child untuk alternating colors</li>
+                            <li>:first-child dan :last-child styling khusus</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Tips:</h3>
+                <ul>
+                    <li>Transitions untuk smooth effects: <code>transition: all 0.3s ease</code></li>
+                    <li>Transform untuk movement: <code>transform: translateY(-5px)</code></li>
+                    <li>Pseudo-class untuk validation: <code>:valid</code>, <code>:invalid</code></li>
+                    <li>Nth-child: <code>:nth-child(odd)</code>, <code>:nth-child(even)</code></li>
+                </ul>
+
+                <h3>Kriteria Penilaian:</h3>
+                <ul class="criteria">
+                    <li>Semua hover effects smooth dan menarik</li>
+                    <li>Active states jelas dan responsive</li>
+                    <li>Focus states accessible dan jelas</li>
+                    <li>Transitions timing tepat (tidak terlalu cepat/lambat)</li>
+                    <li>Visual feedback jelas untuk setiap interaksi</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tugas 8: Final Project -->
+        <section class="task-section">
+            <div class="task-header">
+                <span class="task-number">Tugas 8</span>
+                <h2>Final Project: Personal Website</h2>
+                <span class="difficulty hard">Sulit</span>
+            </div>
+            
+            <div class="task-content">
+                <h3>Objektif:</h3>
+                <p>Membuat personal website yang menggunakan SEMUA teknik CSS yang telah dipelajari</p>
+                
+                <h3>Tugas:</h3>
+                <ol>
+                    <li><strong>Setup & Variables:</strong>
+                        <ul>
+                            <li>Buat CSS variables lengkap (colors, spacing, typography)</li>
+                            <li>Theme variables untuk light/dark mode</li>
+                        </ul>
+                    </li>
+                    <li><strong>Navigation:</strong>
+                        <ul>
+                            <li>Fixed/Sticky navigation dengan hover effects</li>
+                            <li>Smooth scroll behavior</li>
+                        </ul>
+                    </li>
+                    <li><strong>Hero Section:</strong>
+                        <ul>
+                            <li>Gradient atau pattern background</li>
+                            <li>Centered text dengan typography styling</li>
+                            <li>CTA buttons dengan hover animations</li>
+                        </ul>
+                    </li>
+                    <li><strong>About Section:</strong>
+                        <ul>
+                            <li>Flexbox layout untuk image & text</li>
+                            <li>Typography hierarchy jelas</li>
+                            <li>Profile image dengan styling (border-radius, shadow)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Skills/Services Section:</strong>
+                        <ul>
+                            <li>CSS Grid untuk cards</li>
+                            <li>Hover effects pada cards</li>
+                            <li>Icons dengan positioning</li>
+                        </ul>
+                    </li>
+                    <li><strong>Portfolio/Projects Section:</strong>
+                        <ul>
+                            <li>Image gallery dengan filters</li>
+                            <li>Hover overlay effects</li>
+                            <li>Badge positioning (featured, new, dll)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Contact Section:</strong>
+                        <ul>
+                            <li>Form dengan focus & validation states</li>
+                            <li>Background styling menarik</li>
+                            <li>Social media links dengan hover effects</li>
+                        </ul>
+                    </li>
+                    <li><strong>Footer:</strong>
+                        <ul>
+                            <li>Background gradient atau pattern</li>
+                            <li>Links dengan pseudo-classes</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Requirements:</h3>
+                <ul>
+                    <li>✅ Menggunakan CSS Variables</li>
+                    <li>✅ Minimal 3 tipe background styling berbeda</li>
+                    <li>✅ Typography hierarchy jelas</li>
+                    <li>✅ Flexbox DAN Grid digunakan</li>
+                    <li>✅ Image styling dengan effects</li>
+                    <li>✅ Minimal 2 tipe positioning (fixed, absolute, atau sticky)</li>
+                    <li>✅ Hover effects di minimal 5 elements</li>
+                    <li>✅ Focus states untuk form elements</li>
+                    <li>✅ Responsive design (desktop, tablet, mobile)</li>
+                    <li>✅ Smooth transitions & animations</li>
+                </ul>
+
+                <h3>Kriteria Penilaian:</h3>
+                <ul class="criteria">
+                    <li><strong>Functionality (30%):</strong> Semua fitur berfungsi</li>
+                    <li><strong>Design (30%):</strong> Visual menarik dan profesional</li>
+                    <li><strong>Code Quality (20%):</strong> Kode rapi, terorganisir, dengan comments</li>
+                    <li><strong>Responsiveness (10%):</strong> Bekerja di semua device</li>
+                    <li><strong>Creativity (10%):</strong> Ide original dan implementasi unik</li>
+                </ul>
+
+                <div class="bonus-section">
+                    <h3>Bonus Points:</h3>
+                    <ul>
+                        <li>Implementasi dark mode toggle (CSS variables)</li>
+                        <li>Advanced animations menggunakan @keyframes</li>
+                        <li>Custom scrollbar styling</li>
+                        <li>Accessibility features (focus visible, semantic HTML)</li>
+                        <li>Performance optimization (minimal CSS)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Submission Guidelines -->
+        <section class="submission-section">
+            <h2>Panduan Pengumpulan</h2>
+            <div class="submission-content">
+                <h3>Format Pengumpulan:</h3>
+                <ol>
+                    <li>Buat folder dengan format: <code>Nama_TugasCSS_Pertemuan3</code></li>
+                    <li>Setiap tugas dalam sub-folder terpisah: <code>tugas1/</code>, <code>tugas2/</code>, dst.</li>
+                    <li>Setiap folder berisi:
+                        <ul>
+                            <li><code>index.html</code></li>
+                            <li><code>style.css</code></li>
+                            <li><code>README.txt</code> (penjelasan singkat)</li>
+                        </ul>
+                    </li>
+                    <li>Compress folder menjadi ZIP</li>
+                    <li>Upload ke platform yang ditentukan</li>
+                </ol>
+
+                <h3>Checklist Sebelum Submit:</h3>
+                <ul class="checklist">
+                    <li>☐ Semua tugas sudah dikerjakan</li>
+                    <li>☐ Kode sudah ditest di browser</li>
+                    <li>☐ Tidak ada error di console</li>
+                    <li>☐ File dan folder naming sesuai</li>
+                    <li>☐ Kode rapi dengan indentation konsisten</li>
+                    <li>☐ Ada comments untuk penjelasan</li>
+                    <li>☐ README.txt sudah diisi</li>
+                </ul>
+
+                <h3>Deadline:</h3>
+                <div class="deadline-box">
+                    <p><strong>Deadline: 7 hari dari hari ini</strong></p>
+                    <p>Late submission: -10% per hari</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips & Resources -->
+        <section class="resources-section">
+            <h2>Resources & Tips</h2>
+            <div class="resources-content">
+                <h3>Referensi Online:</h3>
+                <ul>
+                    <li><strong>MDN Web Docs:</strong> Dokumentasi lengkap CSS</li>
+                    <li><strong>CSS-Tricks:</strong> Tutorial dan tips CSS</li>
+                    <li><strong>Can I Use:</strong> Browser compatibility checker</li>
+                    <li><strong>Coolors.co:</strong> Color palette generator</li>
+                    <li><strong>Google Fonts:</strong> Font library gratis</li>
+                </ul>
+
+                <h3>Best Practices:</h3>
+                <ul>
+                    <li>✅ Gunakan semantic HTML</li>
+                    <li>✅ Mobile-first approach</li>
+                    <li>✅ Konsisten dengan naming convention</li>
+                    <li>✅ Test di multiple browsers</li>
+                    <li>✅ Optimize untuk performance</li>
+                    <li>✅ Gunakan CSS variables untuk maintainability</li>
+                    <li>✅ Comment kode yang kompleks</li>
+                </ul>
+
+                <h3>Common Mistakes to Avoid:</h3>
+                <ul>
+                    <li>❌ Tidak menggunakan CSS reset/normalize</li>
+                    <li>❌ Over-nesting selectors</li>
+                    <li>❌ Tidak test di mobile devices</li>
+                    <li>❌ Menggunakan !important terlalu sering</li>
+                    <li>❌ Inline styles di HTML</li>
+                    <li>❌ Tidak konsisten dengan units (px vs rem)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="assignment-footer">
+        <p>&copy; 2025 USINDO Web Development Training</p>
+        <p>Jika ada pertanyaan, silakan hubungi mentor Anda</p>
+        <p><strong>Good luck!</strong></p>
+    </footer>
+</body>
+</html>

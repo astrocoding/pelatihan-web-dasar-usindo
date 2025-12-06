@@ -1,0 +1,594 @@
+/* ============================================
+   SAMPEL LENGKAP CSS PROPERTIES
+   Satu selector dengan semua properti yang tersedia
+   ============================================ */
+
+.sampel-lengkap {
+    /* ========== FONT PROPERTIES ========== */
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 16px;
+    font-weight: 400; /* 100, 200, dst., 900, bold, bolder, lighter, normal */
+    font-style: normal; /* normal, italic, oblique */
+    font-variant: normal; /* normal, small-caps */
+    font-stretch: normal; /* normal, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded */
+    
+    /* ========== TEXT PROPERTIES ========== */
+    color: #333333;
+    text-align: left; /* left, right, center, justify, start, end */
+    text-decoration: none; /* none, underline, overline, line-through, underline overline */
+    text-decoration-line: none; /* none, underline, overline, line-through */
+    text-decoration-color: #000000;
+    text-decoration-style: solid; /* solid, double, dotted, dashed, wavy */
+    text-decoration-thickness: 1px;
+    text-transform: none; /* none, uppercase, lowercase, capitalize */
+    text-indent: 0px;
+    text-shadow: none; /* x-offset y-offset blur-radius color */
+    text-overflow: clip; /* clip, ellipsis */
+    letter-spacing: normal; /* normal, 1px, 0.1em */
+    word-spacing: normal; /* normal, 5px, 0.2em */
+    line-height: 1.5; /* normal, 1.5, 150%, 24px */
+    white-space: normal; /* normal, nowrap, pre, pre-wrap, pre-line */
+    word-break: normal; /* normal, break-all, keep-all, break-word */
+    word-wrap: normal; /* normal, break-word */
+    overflow-wrap: normal; /* normal, break-word, anywhere */
+    writing-mode: horizontal-tb; /* horizontal-tb, vertical-rl, vertical-lr */
+    text-orientation: mixed; /* mixed, upright, sideways */
+    direction: ltr; /* ltr, rtl */
+    unicode-bidi: normal; /* normal, embed, bidi-override, isolate, isolate-override, plaintext */
+    
+    /* ========== BACKGROUND PROPERTIES ========== */
+    background-color: transparent;
+    background-image: none; /* none, url('image.jpg'), linear-gradient(), radial-gradient() */
+    background-position: 0% 0%; /* top, bottom, left, right, center, 50% 50%, 10px 20px */
+    background-size: auto; /* auto, cover, contain, 100%, 50px 100px */
+    background-repeat: repeat; /* repeat, repeat-x, repeat-y, no-repeat, space, round */
+    background-attachment: scroll; /* scroll, fixed, local */
+    background-origin: padding-box; /* padding-box, border-box, content-box */
+    background-clip: border-box; /* border-box, padding-box, content-box, text */
+    background-blend-mode: normal; /* normal, multiply, screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, luminosity */
+    
+    /* Shorthand background */
+    /* background: color image position/size repeat attachment origin clip; */
+    
+    /* ========== DISPLAY PROPERTIES ========== */
+    display: block; /* block, inline, inline-block, flex, inline-flex, grid, inline-grid, table, table-row, table-cell, none, contents, flow-root */
+    visibility: visible; /* visible, hidden, collapse */
+    opacity: 1; /* 0 to 1, 0%, 100% */
+    
+    /* Flexbox Properties (when display: flex) */
+    flex-direction: row; /* row, row-reverse, column, column-reverse */
+    flex-wrap: nowrap; /* nowrap, wrap, wrap-reverse */
+    flex-flow: row nowrap; /* shorthand for flex-direction and flex-wrap */
+    justify-content: flex-start; /* flex-start, flex-end, center, space-between, space-around, space-evenly */
+    align-items: stretch; /* stretch, flex-start, flex-end, center, baseline */
+    align-content: stretch; /* stretch, flex-start, flex-end, center, space-between, space-around, space-evenly */
+    gap: 0; /* 10px, 1rem */
+    row-gap: 0;
+    column-gap: 0;
+    
+    /* Flex Item Properties */
+    flex-grow: 0; /* 0, 1, 2, etc */
+    flex-shrink: 1; /* 0, 1, 2, etc */
+    flex-basis: auto; /* auto, 100px, 50%, content */
+    flex: 0 1 auto; /* shorthand for flex-grow, flex-shrink, flex-basis */
+    align-self: auto; /* auto, flex-start, flex-end, center, baseline, stretch */
+    order: 0; /* integer value */
+    
+    /* Grid Properties (when display: grid) */
+    grid-template-columns: none; /* none, 100px 1fr 2fr, repeat(3, 1fr), auto, minmax(100px, 1fr) */
+    grid-template-rows: none; /* same as columns */
+    grid-template-areas: none; /* "header header" "sidebar content" "footer footer" */
+    grid-template: none; /* shorthand for rows, columns, areas */
+    grid-auto-columns: auto; /* auto, 100px, 1fr, minmax(100px, auto) */
+    grid-auto-rows: auto;
+    grid-auto-flow: row; /* row, column, dense, row dense, column dense */
+    grid-column-gap: 0; /* deprecated, use column-gap */
+    grid-row-gap: 0; /* deprecated, use row-gap */
+    grid-gap: 0; /* deprecated, use gap */
+    
+    /* Grid Item Properties */
+    grid-column-start: auto; /* auto, 1, span 2, line-name */
+    grid-column-end: auto;
+    grid-row-start: auto;
+    grid-row-end: auto;
+    grid-column: auto; /* shorthand for start / end */
+    grid-row: auto;
+    grid-area: auto; /* shorthand or area name */
+    justify-self: auto; /* auto, start, end, center, stretch */
+    align-self: auto; /* auto, start, end, center, stretch */
+    place-self: auto; /* shorthand for align-self and justify-self */
+    
+    /* ========== BOX MODEL ========== */
+    width: auto;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    max-width: none;
+    max-height: none;
+    padding: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    border: none;
+    border-width: medium;
+    border-style: none; /* none, solid, dashed, dotted, double, groove, ridge, inset, outset */
+    border-color: currentColor;
+    border-radius: 0;
+    box-sizing: content-box; /* content-box, border-box */
+    
+    /* ========== POSITIONING ========== */
+    position: static; /* static, relative, absolute, fixed, sticky */
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: auto; /* auto, integer */
+    
+    /* ========== OVERFLOW ========== */
+    overflow: visible; /* visible, hidden, scroll, auto, clip */
+    overflow-x: visible;
+    overflow-y: visible;
+    
+    /* ========== TRANSFORM & ANIMATION ========== */
+    transform: none; /* translate(), rotate(), scale(), skew(), matrix() */
+    transform-origin: 50% 50%; /* x y, top left, center center */
+    transform-style: flat; /* flat, preserve-3d */
+    perspective: none; /* none, 1000px */
+    perspective-origin: 50% 50%;
+    backface-visibility: visible; /* visible, hidden */
+    
+    /* ========== TRANSITIONS ========== */
+    transition-property: all; /* all, none, property-name */
+    transition-duration: 0s; /* 0s, 0.3s, 300ms */
+    transition-timing-function: ease; /* ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier() */
+    transition-delay: 0s;
+    transition: all 0s ease 0s; /* shorthand */
+    
+    /* ========== CURSOR & POINTER ========== */
+    cursor: auto; /* auto, pointer, default, text, move, wait, help, crosshair, not-allowed, grab, grabbing, zoom-in, zoom-out */
+    pointer-events: auto; /* auto, none */
+    user-select: auto; /* auto, none, text, all */
+    
+    /* ========== FILTERS & EFFECTS ========== */
+    filter: none; /* blur(), brightness(), contrast(), drop-shadow(), grayscale(), hue-rotate(), invert(), opacity(), saturate(), sepia() */
+    backdrop-filter: none; /* same as filter */
+    mix-blend-mode: normal; /* same as background-blend-mode */
+    isolation: auto; /* auto, isolate */
+    
+    /* ========== SHADOWS ========== */
+    box-shadow: none; /* x-offset y-offset blur spread color, inset */
+    
+    /* ========== CLIPPING & MASKING ========== */
+    clip: auto; /* deprecated */
+    clip-path: none; /* none, circle(), ellipse(), polygon(), path() */
+    mask-image: none;
+    mask-mode: match-source;
+    mask-repeat: repeat;
+    mask-position: center;
+    mask-clip: border-box;
+    mask-origin: border-box;
+    mask-size: auto;
+    mask-composite: add;
+    
+    /* ========== CONTENT & COUNTERS ========== */
+    content: normal; /* normal, none, string, counter(), attr() */
+    counter-reset: none;
+    counter-increment: none;
+    quotes: auto;
+    
+    /* ========== LIST STYLING ========== */
+    list-style-type: disc; /* disc, circle, square, decimal, none */
+    list-style-position: outside; /* outside, inside */
+    list-style-image: none;
+    list-style: disc outside none; /* shorthand */
+    
+    /* ========== TABLE PROPERTIES ========== */
+    border-collapse: separate; /* separate, collapse */
+    border-spacing: 0;
+    caption-side: top; /* top, bottom */
+    empty-cells: show; /* show, hide */
+    table-layout: auto; /* auto, fixed */
+    vertical-align: baseline; /* baseline, top, middle, bottom, sub, super, text-top, text-bottom */
+    
+    /* ========== SCROLL BEHAVIOR ========== */
+    scroll-behavior: auto; /* auto, smooth */
+    scroll-margin: 0;
+    scroll-padding: 0;
+    scroll-snap-type: none; /* none, x, y, block, inline, both, mandatory, proximity */
+    scroll-snap-align: none; /* none, start, end, center */
+    scroll-snap-stop: normal; /* normal, always */
+    overscroll-behavior: auto; /* auto, contain, none */
+    
+    /* ========== MISCELLANEOUS ========== */
+    resize: none; /* none, both, horizontal, vertical */
+    outline: none;
+    outline-width: medium;
+    outline-style: none;
+    outline-color: invert;
+    outline-offset: 0;
+    box-decoration-break: slice; /* slice, clone */
+    image-rendering: auto; /* auto, crisp-edges, pixelated */
+    object-fit: fill; /* fill, contain, cover, none, scale-down */
+    object-position: 50% 50%;
+    aspect-ratio: auto; /* auto, 16/9, 1 */
+    appearance: none; /* none, auto */
+    caret-color: auto; /* auto, color */
+    will-change: auto; /* auto, scroll-position, contents, property-name */
+}
+
+/* ========================================
+   PSEUDO-CLASSES
+   ======================================== */
+
+/* Link States */
+.sampel-lengkap:link {
+    /* Unvisited link */
+    color: blue;
+}
+
+.sampel-lengkap:visited {
+    /* Visited link */
+    color: purple;
+}
+
+.sampel-lengkap:hover {
+    /* Mouse over */
+    background-color: lightblue;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.sampel-lengkap:active {
+    /* Click/Active state */
+    background-color: darkblue;
+    transform: scale(0.95);
+}
+
+.sampel-lengkap:focus {
+    /* Element has focus */
+    outline: 2px solid blue;
+    box-shadow: 0 0 0 3px rgba(0, 100, 255, 0.3);
+}
+
+.sampel-lengkap:focus-visible {
+    /* Focus with keyboard navigation */
+    outline: 3px solid orange;
+}
+
+.sampel-lengkap:focus-within {
+    /* Parent has focused child */
+    border-color: green;
+}
+
+/* Input States */
+.sampel-lengkap:enabled {
+    /* Enabled form element */
+    opacity: 1;
+}
+
+.sampel-lengkap:disabled {
+    /* Disabled form element */
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.sampel-lengkap:checked {
+    /* Checked checkbox/radio */
+    background-color: green;
+}
+
+.sampel-lengkap:indeterminate {
+    /* Indeterminate checkbox */
+    background-color: gray;
+}
+
+.sampel-lengkap:valid {
+    /* Valid form input */
+    border-color: green;
+}
+
+.sampel-lengkap:invalid {
+    /* Invalid form input */
+    border-color: red;
+}
+
+.sampel-lengkap:required {
+    /* Required form field */
+    border-left: 3px solid red;
+}
+
+.sampel-lengkap:optional {
+    /* Optional form field */
+    border-left: 3px solid gray;
+}
+
+.sampel-lengkap:read-only {
+    /* Read-only input */
+    background-color: #f0f0f0;
+}
+
+.sampel-lengkap:read-write {
+    /* Editable input */
+    background-color: white;
+}
+
+.sampel-lengkap:placeholder-shown {
+    /* Input with visible placeholder */
+    font-style: italic;
+}
+
+.sampel-lengkap:in-range {
+    /* Value in range */
+    border-color: green;
+}
+
+.sampel-lengkap:out-of-range {
+    /* Value out of range */
+    border-color: red;
+}
+
+/* Structural Pseudo-classes */
+.sampel-lengkap:first-child {
+    /* First child of parent */
+    font-weight: bold;
+}
+
+.sampel-lengkap:last-child {
+    /* Last child of parent */
+    border-bottom: none;
+}
+
+.sampel-lengkap:first-of-type {
+    /* First of its type */
+    margin-top: 0;
+}
+
+.sampel-lengkap:last-of-type {
+    /* Last of its type */
+    margin-bottom: 0;
+}
+
+.sampel-lengkap:only-child {
+    /* Only child of parent */
+    text-align: center;
+}
+
+.sampel-lengkap:only-of-type {
+    /* Only one of its type */
+    width: 100%;
+}
+
+.sampel-lengkap:nth-child(2) {
+    /* Second child */
+    background-color: #f0f0f0;
+}
+
+.sampel-lengkap:nth-child(odd) {
+    /* Odd children (1, 3, 5...) */
+    background-color: #ffffff;
+}
+
+.sampel-lengkap:nth-child(even) {
+    /* Even children (2, 4, 6...) */
+    background-color: #f9f9f9;
+}
+
+.sampel-lengkap:nth-child(3n) {
+    /* Every 3rd child (3, 6, 9...) */
+    font-weight: bold;
+}
+
+.sampel-lengkap:nth-child(3n+1) {
+    /* Formula: 3×n + 1 (1, 4, 7...) */
+    color: blue;
+}
+
+.sampel-lengkap:nth-last-child(2) {
+    /* Second from end */
+    border-bottom: 2px solid black;
+}
+
+.sampel-lengkap:nth-of-type(2) {
+    /* Second of its type */
+    margin-left: 10px;
+}
+
+.sampel-lengkap:nth-last-of-type(2) {
+    /* Second of its type from end */
+    margin-right: 10px;
+}
+
+/* Other Pseudo-classes */
+.sampel-lengkap:empty {
+    /* Element with no children */
+    display: none;
+}
+
+.sampel-lengkap:root {
+    /* Root element (html) */
+    font-size: 16px;
+}
+
+.sampel-lengkap:target {
+    /* Element is target of URL fragment */
+    background-color: yellow;
+}
+
+.sampel-lengkap:not(.other-class) {
+    /* Does not match selector */
+    color: black;
+}
+
+.sampel-lengkap:is(.class1, .class2) {
+    /* Matches any selector in list */
+    font-weight: bold;
+}
+
+.sampel-lengkap:where(.class1, .class2) {
+    /* Same as :is() but with 0 specificity */
+    color: red;
+}
+
+.sampel-lengkap:has(> img) {
+    /* Contains matching element */
+    padding: 20px;
+}
+
+.sampel-lengkap:lang(en) {
+    /* Element with lang attribute */
+    quotes: '"' '"';
+}
+
+.sampel-lengkap:dir(rtl) {
+    /* Direction right-to-left */
+    text-align: right;
+}
+
+/* ========================================
+   PSEUDO-ELEMENTS
+   ======================================== */
+
+.sampel-lengkap::before {
+    /* Insert content before element */
+    content: "→ ";
+    color: blue;
+    font-weight: bold;
+}
+
+.sampel-lengkap::after {
+    /* Insert content after element */
+    content: " ←";
+    color: red;
+    font-weight: bold;
+}
+
+.sampel-lengkap::first-line {
+    /* First line of text */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sampel-lengkap::first-letter {
+    /* First letter */
+    font-size: 2em;
+    float: left;
+    margin-right: 5px;
+}
+
+.sampel-lengkap::selection {
+    /* Selected text */
+    background-color: yellow;
+    color: black;
+}
+
+.sampel-lengkap::placeholder {
+    /* Placeholder text */
+    color: #999;
+    font-style: italic;
+}
+
+.sampel-lengkap::marker {
+    /* List item marker */
+    color: red;
+    font-weight: bold;
+}
+
+.sampel-lengkap::backdrop {
+    /* Backdrop for dialog/fullscreen */
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* ========================================
+   COMBINATORS EXAMPLES
+   ======================================== */
+
+/* Descendant combinator (space) */
+.sampel-lengkap p {
+    /* All p inside .sampel-lengkap */
+    margin: 10px 0;
+}
+
+/* Child combinator (>) */
+.sampel-lengkap > p {
+    /* Direct children p only */
+    padding: 5px;
+}
+
+/* Adjacent sibling (+) */
+.sampel-lengkap + p {
+    /* p immediately after .sampel-lengkap */
+    margin-top: 20px;
+}
+
+/* General sibling (~) */
+.sampel-lengkap ~ p {
+    /* All p siblings after .sampel-lengkap */
+    color: gray;
+}
+
+/* ========================================
+   ANIMATION PROPERTIES
+   ======================================== */
+
+.sampel-lengkap {
+    animation-name: none;
+    animation-duration: 0s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1; /* number, infinite */
+    animation-direction: normal; /* normal, reverse, alternate, alternate-reverse */
+    animation-fill-mode: none; /* none, forwards, backwards, both */
+    animation-play-state: running; /* running, paused */
+    /* Shorthand: name duration timing-function delay iteration-count direction fill-mode play-state */
+    animation: none 0s ease 0s 1 normal none running;
+}
+
+/* Keyframes example */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES & RESPONSIVE
+   ======================================== */
+
+@media screen and (max-width: 768px) {
+    .sampel-lengkap {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media print {
+    .sampel-lengkap {
+        color: black;
+        background: white;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .sampel-lengkap {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sampel-lengkap {
+        animation: none;
+        transition: none;
+    }
+}

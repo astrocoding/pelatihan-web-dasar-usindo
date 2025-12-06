@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Lengkap CSS Styling - USINDO Training</title>
+    <link rel="stylesheet" href="../styles/css-guide.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Panduan Lengkap CSS Styling</h1>
+        <p>Pelajari berbagai teknik styling CSS modern</p>
+    </header>
+
+    <nav class="table-of-contents">
+        <h2>Daftar Isi</h2>
+        <ul>
+            <li><a href="#variables">1. CSS Variables</a></li>
+            <li><a href="#backgrounds">2. Background Styling</a></li>
+            <li><a href="#fonts">3. Font & Text Styling</a></li>
+            <li><a href="#display">4. Display Properties</a></li>
+            <li><a href="#images">5. Images Styling</a></li>
+            <li><a href="#positioning">6. Positioning</a></li>
+            <li><a href="#pseudo">7. Pseudo-Classes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section 1: CSS Variables -->
+    <section id="variables" class="content-section">
+        <h2>1. CSS Variables (Custom Properties)</h2>
+        <p class="section-description">CSS Variables memungkinkan kita menyimpan nilai yang dapat digunakan kembali di seluruh stylesheet.</p>
+        
+        <div class="example-box">
+            <h3>Contoh Penggunaan Variables</h3>
+            <div class="variable-demo">
+                <div class="box primary">Primary Color</div>
+                <div class="box secondary">Secondary Color</div>
+                <div class="box accent">Accent Color</div>
+            </div>
+            <pre class="code-block">
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --spacing-unit: 1rem;
+    --border-radius: 8px;
+}
+
+.box {
+    background: var(--primary-color);
+    padding: var(--spacing-unit);
+    border-radius: var(--border-radius);
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Section 2: Background Styling -->
+    <section id="backgrounds" class="content-section">
+        <h2>2. Background Styling</h2>
+        <p class="section-description">Background properties mengontrol tampilan latar belakang elemen.</p>
+        
+        <div class="background-examples">
+            <div class="bg-demo bg-solid">
+                <h3>Solid Color</h3>
+                <p>background-color: #3498db;</p>
+            </div>
+            
+            <div class="bg-demo bg-gradient">
+                <h3>Linear Gradient</h3>
+                <p>background: linear-gradient()</p>
+            </div>
+            
+            <div class="bg-demo bg-gradient-radial">
+                <h3>Radial Gradient</h3>
+                <p>background: radial-gradient()</p>
+            </div>
+            
+            <div class="bg-demo bg-pattern">
+                <h3>Background Pattern</h3>
+                <p>Multiple backgrounds</p>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>Background Properties</h3>
+            <pre class="code-block">
+/* Solid Background */
+.bg-solid {
+    background-color: #3498db;
+}
+
+/* Linear Gradient */
+.bg-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Radial Gradient */
+.bg-gradient-radial {
+    background: radial-gradient(circle, #f093fb 0%, #f5576c 100%);
+}
+
+/* Background Image */
+.bg-image {
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Section 3: Font & Text Styling -->
+    <section id="fonts" class="content-section">
+        <h2>3. Font & Text Styling</h2>
+        <p class="section-description">Mengatur tampilan teks dan tipografi.</p>
+        
+        <div class="text-examples">
+            <h3 class="text-heading">Heading dengan Font Styling</h3>
+            <p class="text-normal">Ini adalah teks normal dengan font-family: 'Segoe UI'</p>
+            <p class="text-bold">Teks tebal dengan font-weight: bold</p>
+            <p class="text-italic">Teks miring dengan font-style: italic</p>
+            <p class="text-uppercase">Uppercase text transformation</p>
+            <p class="text-lowercase">LOWERCASE TEXT TRANSFORMATION</p>
+            <p class="text-capitalize">capitalize each word</p>
+            <p class="text-spaced">T e k s   d e n g a n   l e t t e r - s p a c i n g</p>
+            <p class="text-shadow">Teks dengan shadow effect</p>
+            <p class="text-aligned-center">Teks rata tengah</p>
+            <p class="text-aligned-right">Teks rata kanan</p>
+            <p class="text-aligned-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Text Properties</h3>
+            <pre class="code-block">
+.text-styling {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 400; /* 100-900 */
+    font-style: italic;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    text-align: center; /* left, right, center, justify */
+    text-decoration: underline;
+    text-transform: uppercase; /* lowercase, capitalize */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Section 4: Display Properties -->
+    <section id="display" class="content-section">
+        <h2>4. Display Properties & Cara Kerjanya</h2>
+        <p class="section-description">Display mengontrol bagaimana elemen ditampilkan dalam layout.</p>
+        
+        <div class="display-demo">
+            <h3>Display: Block</h3>
+            <p class="info-text">Elemen block mengambil seluruh lebar yang tersedia dan mulai di baris baru.</p>
+            <div class="display-example">
+                <div class="display-block">Block 1</div>
+                <div class="display-block">Block 2</div>
+                <div class="display-block">Block 3</div>
+            </div>
+
+            <h3>Display: Inline</h3>
+            <p class="info-text">Elemen inline mengalir dalam satu baris dan hanya mengambil lebar sesuai konten.</p>
+            <div class="display-example">
+                <span class="display-inline">Inline 1</span>
+                <span class="display-inline">Inline 2</span>
+                <span class="display-inline">Inline 3</span>
+            </div>
+
+            <h3>Display: Inline-Block</h3>
+            <p class="info-text">Kombinasi inline dan block - bisa diatur dimensi tapi tetap inline.</p>
+            <div class="display-example">
+                <div class="display-inline-block">IB 1</div>
+                <div class="display-inline-block">IB 2</div>
+                <div class="display-inline-block">IB 3</div>
+            </div>
+
+            <h3>Display: Flex</h3>
+            <p class="info-text">Flexible Box Layout untuk membuat layout yang responsive.</p>
+            <div class="display-example display-flex">
+                <div class="flex-item">Flex 1</div>
+                <div class="flex-item">Flex 2</div>
+                <div class="flex-item">Flex 3</div>
+            </div>
+
+            <h3>Display: Grid</h3>
+            <p class="info-text">Grid Layout untuk layout 2 dimensi yang kompleks.</p>
+            <div class="display-example display-grid">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+            </div>
+
+            <h3>Display: None</h3>
+            <p class="info-text">Menyembunyikan elemen sepenuhnya dari layout.</p>
+            <div class="display-example">
+                <div class="display-block">Visible</div>
+                <div class="display-none">Hidden (display: none)</div>
+                <div class="display-block">Visible</div>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>Display Code Examples</h3>
+            <pre class="code-block">
+/* Block: Mengambil seluruh lebar */
+.display-block {
+    display: block;
+    width: 100%;
+}
+
+/* Inline: Hanya lebar konten */
+.display-inline {
+    display: inline;
+}
+
+/* Inline-Block: Hybrid */
+.display-inline-block {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+/* Flexbox */
+.display-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Grid */
+.display-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Hide Element */
+.display-none {
+    display: none;
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Section 5: Images Styling -->
+    <section id="images" class="content-section">
+        <h2>5. Images Styling</h2>
+        <p class="section-description">Teknik styling untuk gambar dan media.</p>
+        
+        <div class="images-demo">
+            <div class="image-example">
+                <div class="img-placeholder img-rounded">
+                    Rounded
+                </div>
+                <p>border-radius: 15px</p>
+            </div>
+
+            <div class="image-example">
+                <div class="img-placeholder img-circle">
+                    Circle
+                </div>
+                <p>border-radius: 50%</p>
+            </div>
+
+            <div class="image-example">
+                <div class="img-placeholder img-shadow">
+                    Shadow
+                </div>
+                <p>box-shadow</p>
+            </div>
+
+            <div class="image-example">
+                <div class="img-placeholder img-border">
+                    Border
+                </div>
+                <p>border: 5px solid</p>
+            </div>
+
+            <div class="image-example">
+                <div class="img-placeholder img-grayscale">
+                    Filter
+                </div>
+                <p>filter: grayscale()</p>
+            </div>
+
+            <div class="image-example">
+                <div class="img-placeholder img-scale">
+                    Hover Scale
+                </div>
+                <p>transform: scale()</p>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>Image Styling Code</h3>
+            <pre class="code-block">
+/* Responsive Image */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Rounded Corners */
+.img-rounded {
+    border-radius: 15px;
+}
+
+/* Circle Image */
+.img-circle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Image with Shadow */
+.img-shadow {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Image Filters */
+.img-grayscale {
+    filter: grayscale(100%);
+}
+
+.img-blur {
+    filter: blur(5px);
+}
+
+.img-brightness {
+    filter: brightness(1.2);
+}
+
+/* Object Fit */
+.img-cover {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Section 6: Positioning -->
+    <section id="positioning" class="content-section">
+        <h2>6. Positioning Styling</h2>
+        <p class="section-description">Mengatur posisi elemen dalam halaman.</p>
+        
+        <div class="positioning-demo">
+            <h3>Position: Static (Default)</h3>
+            <div class="position-container">
+                <div class="pos-static">Static positioning - flow normal</div>
+            </div>
+
+            <h3>Position: Relative</h3>
+            <p class="info-text">Relative terhadap posisi normalnya</p>
+            <div class="position-container">
+                <div class="pos-relative">
+                    Relative (bergeser dari posisi normal)
+                </div>
+            </div>
+
+            <h3>Position: Absolute</h3>
+            <p class="info-text">Absolute terhadap parent terdekat yang positioned</p>
+            <div class="position-container pos-parent">
+                <div class="pos-absolute pos-topleft">Top Left</div>
+                <div class="pos-absolute pos-topright">Top Right</div>
+                <div class="pos-absolute pos-bottomleft">Bottom Left</div>
+                <div class="pos-absolute pos-bottomright">Bottom Right</div>
+                <div class="pos-absolute pos-center">Center</div>
+                <p style="margin-top: 60px;">Container dengan position: relative</p>
+            </div>
+
+            <h3>Position: Fixed</h3>
+            <p class="info-text">Fixed terhadap viewport (scroll dengan page)</p>
+            <div class="fixed-demo-trigger">
+                <button class="btn-show-fixed">Tampilkan Fixed Element</button>
+            </div>
+
+            <h3>Position: Sticky</h3>
+            <p class="info-text">Hybrid antara relative dan fixed</p>
+            <div class="sticky-demo-container">
+                <div class="pos-sticky">Sticky Header (scroll untuk lihat efek)</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>Positioning Code</h3>
+            <pre class="code-block">
+/* Static - Default, mengikuti normal flow */
+.pos-static {
+    position: static;
+}
+
+/* Relative - Relatif terhadap posisi normalnya */
+.pos-relative {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+/* Absolute - Relatif terhadap parent positioned */
+.pos-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Fixed - Relatif terhadap viewport */
+.pos-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Sticky - Hybrid relative dan fixed */
+.pos-sticky {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+}
+
+/* Z-index untuk layering */
+.layer-front {
+    position: relative;
+    z-index: 10;
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Section 7: Pseudo-Classes -->
+    <section id="pseudo" class="content-section">
+        <h2>7. Pseudo-Classes (Hover & Active)</h2>
+        <p class="section-description">Pseudo-classes untuk interaksi dan state elemen.</p>
+        
+        <div class="pseudo-demo">
+            <h3>Hover Effects</h3>
+            <div class="hover-examples">
+                <button class="btn-hover btn-hover-scale">Hover Scale</button>
+                <button class="btn-hover btn-hover-color">Hover Color</button>
+                <button class="btn-hover btn-hover-shadow">Hover Shadow</button>
+                <button class="btn-hover btn-hover-slide">Hover Slide</button>
+            </div>
+
+            <h3>Active State</h3>
+            <div class="active-examples">
+                <button class="btn-active">Click Me (Active State)</button>
+                <button class="btn-active-scale">Click - Scale Down</button>
+            </div>
+
+            <h3>Link States</h3>
+            <div class="link-examples">
+                <a href="#" class="link-style">Normal Link</a>
+                <a href="#" class="link-style link-visited">Visited Link Style</a>
+                <a href="#" class="link-style link-underline">Hover Underline Animation</a>
+            </div>
+
+            <h3>Focus State (untuk form)</h3>
+            <div class="focus-examples">
+                <input type="text" class="input-focus" placeholder="Focus pada input ini">
+                <textarea class="textarea-focus" placeholder="Focus pada textarea"></textarea>
+            </div>
+
+            <h3>Kombinasi Pseudo-Classes</h3>
+            <div class="card-hover">
+                <h4>Hover Card</h4>
+                <p>Card ini akan berubah saat di-hover dengan multiple effects</p>
+                <button class="card-button">Action Button</button>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>Pseudo-Classes Code</h3>
+            <pre class="code-block">
+/* Hover - Saat mouse di atas elemen */
+.btn-hover:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Active - Saat elemen diklik */
+.btn-active:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Focus - Saat elemen mendapat focus */
+.input-focus:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+}
+
+/* Link States */
+a:link { color: #3498db; }
+a:visited { color: #9b59b6; }
+a:hover { color: #2980b9; }
+a:active { color: #e74c3c; }
+
+/* First-child & Last-child */
+li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* Nth-child */
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* Not selector */
+.item:not(.selected) {
+    opacity: 0.5;
+}
+
+/* Disabled */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+            </pre>
+        </div>
+    </section>
+
+    <!-- Fixed Element (Hidden by default) -->
+    <div class="pos-fixed" id="fixedElement" style="display: none;">
+        Fixed Element
+        <button class="close-fixed">✕</button>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 USINDO Web Development Training</p>
+        <p>Panduan CSS Lengkap untuk Pemula hingga Mahir</p>
+    </footer>
+
+    <script>
+        // Simple JavaScript for fixed element demo
+        document.querySelector('.btn-show-fixed')?.addEventListener('click', function() {
+            document.getElementById('fixedElement').style.display = 'block';
+        });
+
+        document.querySelector('.close-fixed')?.addEventListener('click', function() {
+            document.getElementById('fixedElement').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
