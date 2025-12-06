@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Variabel warna */
+  --primary-color: #e86965;
+  --warna: white;
+
+  /* Variabel ukuran font */
+  --font-besar: 50px;
+  --font-family: 'Arial', sans-serif;
+  --font-sedang: 30px;
+  --font-tebal: 800;
+  --font-miring: italic;
+  --font-varian: normal;
+
+  /* Variable text */
+  --alinea: center;
+  --text-transform: uppercase;
+  --text-decoration: underline;
+  --jarak: 1.5;
+}
+
+h1.judul {
+  color: var(--warna);
+  background-color: var(--primary-color);
+  font-size: var(--font-besar);
+}
+
+h6.subjudul {
+  font-family: var(--font-family);
+  font-size: var(--font-sedang);
+  font-weight: var(--font-tebal);
+  font-style: var(--font-miring);
+  font-variant: var(--font-varian);
+}
+
+p.paragraf {
+  text-align: var(--alinea);
+  text-transform: var(--text-transform);
+  text-decoration: var(--text-decoration);
+  line-height: var(--jarak);
+}
+
+body {
+  background-image: url('../testingan.jpg');
+  background-size: cover;
+}
+
+div.kotak {
+  width: 200px;
+  height: 200px;
+  background-color: var(--primary-color);
+  color: var(--warna);
+  margin: 20px auto;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+div.kotak:hover {
+  background-color: var(--warna);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+div.lingkaran {
+  width: 300px;
+  height: 300px;
+  background-color: #44beee;
+  border-radius: 50%;
+  margin: 20px auto;
+  border: 14px solid #3dda6f;
+}
