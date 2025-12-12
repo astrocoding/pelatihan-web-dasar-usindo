@@ -298,6 +298,7 @@ for (let i = 1; i <= 5; i++) {
 // FOR loop dengan array
 console.log("\nLoop array buah:");
 let buahBuahan = ["Apel", "Jeruk", "Mangga", "Pisang"];
+let campuran = [42, "halo", true, null];
 for (let i = 0; i < buahBuahan.length; i++) {
     console.log("Buah ke-" + (i + 1) + ":", buahBuahan[i]);
 }
