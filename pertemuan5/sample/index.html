@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JavaScript Dasar - USINDO Training</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        p {
+            color: #34495e;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .info {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .code-demo {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .result {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+    
+    <!-- ========================================
+         CARA 2: INTERNAL JAVASCRIPT
+         JavaScript ditulis di dalam tag <script>
+         di bagian <head> atau <body>
+         ======================================== -->
+    <script>
+        // Ini adalah Internal JavaScript
+        // Ditulis langsung di dalam HTML
+        
+        function internalJSDemo() {
+            alert("Ini pesan dari Internal JavaScript!");
+            console.log("Internal JS berhasil dijalankan");
+        }
+        
+        // Fungsi untuk menampilkan tanggal
+        function showDate() {
+            var today = new Date();
+            var dateString = today.toLocaleDateString('id-ID', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            document.getElementById('dateResult').innerHTML = "Hari ini: " + dateString;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Belajar JavaScript Dasar</h1>
+        <p class="subtitle">USINDO Web Development Training - Pertemuan 5</p>
+        
+        <!-- =====================================
+             SECTION 1: CARA MENJALANKAN JAVASCRIPT
+             ===================================== -->
+        <div class="section">
+            <h2>1. Cara Menjalankan JavaScript</h2>
+            <p>Ada 3 cara untuk menjalankan JavaScript di HTML:</p>
+            
+            <div class="info">
+                <h3>a. Inline JavaScript</h3>
+                <p>JavaScript ditulis langsung di dalam atribut HTML element</p>
+                
+                <!-- CARA 1: INLINE JAVASCRIPT -->
+                <button onclick="alert('Halo dari Inline JavaScript!')">
+                    Klik - Inline JS
+                </button>
+                
+                <button onclick="console.log('Pesan di Console dari Inline JS')">
+                    Console Log - Inline JS
+                </button>
+                
+                <div class="code-demo">
+&lt;button onclick="alert('Halo!')"&gt;Klik Saya&lt;/button&gt;
+                </div>
+            </div>
+            
+            <div class="info">
+                <h3>b. Internal JavaScript</h3>
+                <p>JavaScript ditulis di dalam tag &lt;script&gt; di HTML</p>
+                
+                <button onclick="internalJSDemo()">Klik - Internal JS</button>
+                <button onclick="showDate()">Tampilkan Tanggal</button>
+                <div id="dateResult" class="result" style="display: none;"></div>
+                
+                <div class="code-demo">
+&lt;script&gt;
+    function internalJSDemo() {
+        alert("Halo dari Internal JS!");
+    }
+&lt;/script&gt;
+                </div>
+            </div>
+            
+            <div class="info">
+                <h3>c. External JavaScript</h3>
+                <p>JavaScript ditulis di file terpisah (.js) dan di-link ke HTML</p>
+                
+                <button onclick="externalJSDemo()">Klik - External JS</button>
+                <button onclick="runAllExamples()">Jalankan Semua Contoh</button>
+                
+                <div class="code-demo">
+&lt;script src="index.js"&gt;&lt;/script&gt;
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>💡 Best Practice:</strong> Gunakan External JavaScript untuk kode yang kompleks dan dapat digunakan kembali (reusable).
+            </div>
+        </div>
+        
+        <!-- =====================================
+             SECTION 2: CONSOLE OUTPUT
+             ===================================== -->
+        <div class="section">
+            <h2>2. Output JavaScript</h2>
+            <p>Buka <strong>Developer Console</strong> (F12 atau Ctrl+Shift+I) untuk melihat output console!</p>
+            
+            <button onclick="demonstrateOutput()">Lihat Berbagai Output</button>
+            
+            <div class="info">
+                <p><strong>Cara melihat output:</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li><code>console.log()</code> - Menampilkan di console</li>
+                    <li><code>alert()</code> - Menampilkan popup</li>
+                    <li><code>document.write()</code> - Menulis ke halaman (hati-hati!)</li>
+                    <li><code>innerHTML</code> - Mengubah konten HTML element</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- =====================================
+             SECTION 3: INFO TAMBAHAN
+             ===================================== -->
+        <div class="section">
+            <h2>3. Lihat File index.js</h2>
+            <p>File <strong>index.js</strong> berisi contoh lengkap untuk:</p>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li> Variable dan Tipe Data</li>
+                <li> Aturan Penamaan Variable</li>
+                <li> Operator (Aritmatika, Perbandingan, Logika)</li>
+                <li> Control Flow (if-else, switch, for, while, do-while)</li>
+                <li> Fungsi (Function)</li>
+                <li> Array</li>
+                <li> Object</li>
+            </ul>
+            
+            <div class="note">
+                <strong>📌 Catatan:</strong> Buka Developer Console (F12) untuk melihat semua output dari contoh-contoh di index.js!
+            </div>
+        </div>
+    </div>
+    
+    <!-- ========================================
+         CARA 3: EXTERNAL JAVASCRIPT
+         JavaScript ditulis di file terpisah
+         ======================================== -->
+    <script src="index.js"></script>
+    
+    <!-- Script untuk demo output -->
+    <script>
+        function demonstrateOutput() {
+            // 1. Console.log
+            console.log("=== DEMONSTRASI OUTPUT ===");
+            console.log("1. Ini output dari console.log()");
+            
+            // 2. Alert
+            alert("2. Ini output dari alert()");
+            
+            // 3. innerHTML
+            var resultDiv = document.createElement('div');
+            resultDiv.className = 'result';
+            resultDiv.innerHTML = "3. Ini output menggunakan innerHTML";
+            document.querySelector('.section:nth-child(3)').appendChild(resultDiv);
+            
+            // 4. Console dengan berbagai tipe
+            console.log("String:", "Halo");
+            console.log("Number:", 123);
+            console.log("Boolean:", true);
+            console.log("Array:", [1, 2, 3]);
+            console.log("Object:", {name: "John", age: 30});
+        }
+        
+        // Show date result when button clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            var showDateBtn = document.querySelector('button[onclick="showDate()"]');
+            if (showDateBtn) {
+                showDateBtn.addEventListener('click', function() {
+                    document.getElementById('dateResult').style.display = 'block';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
