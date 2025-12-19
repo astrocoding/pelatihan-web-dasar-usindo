@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi To-Do List Sederhana</title>
+    <link rel="stylesheet" href="./todo.css">
+</head>
+<body>
+    <!-- Container Utama -->
+    <div class="container">
+        
+        <!-- Header/Judul -->
+        <div class="header">
+            <h1>Daftar Tugas Saya</h1>
+            <p class="subtitle">Catat dan kelola tugas harianmu</p>
+        </div>
+
+        <!-- Form Input -->
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="taskInput" 
+                class="task-input" 
+                placeholder="Tulis tugas baru di sini...">
+            <button id="addButton" class="add-button">Tambah</button>
+        </div>
+
+        <!-- Daftar Tugas -->
+        <div class="task-list">
+            <!-- Tugas akan ditambahkan di sini oleh JavaScript -->
+        </div>
+
+    </div>
+
+    <!-- Link ke JavaScript -->
+    <script src="./todo.js"></script>
+</body>
+</html>
