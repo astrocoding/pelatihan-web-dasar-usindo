@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM - Sampel Lengkap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .demo-box {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        .hidden {
+            display: none;
+        }
+        .active {
+            border: 3px solid green;
+            background-color: #d4edda;
+        }
+        input, textarea {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript DOM - Sampel Lengkap</h1>
+
+    <!-- 1. AKSES ELEMEN DOM -->
+    <div class="section">
+        <h2>1. Akses Elemen DOM</h2>
+        <div id="elementById" class="demo-box">Element dengan ID</div>
+        <div class="elementByClass demo-box">Element dengan Class (1)</div>
+        <div class="elementByClass demo-box">Element dengan Class (2)</div>
+        <p class="demo-box">Paragraph pertama</p>
+        <p class="demo-box">Paragraph kedua</p>
+        <div data-info="test" class="demo-box">Element dengan data attribute</div>
+        <button onclick="aksesElemen()">Jalankan Contoh Akses Elemen</button>
+    </div>
+
+    <!-- 2. MENGUBAH ISI KONTEN -->
+    <div class="section">
+        <h2>2. Mengubah Isi Konten Elemen</h2>
+        <div id="contentText" class="demo-box">Teks awal</div>
+        <div id="contentHTML" class="demo-box">HTML awal</div>
+        <div id="contentValue" class="demo-box">
+            <input type="text" id="inputValue" value="Nilai awal" />
+        </div>
+        <button onclick="ubahKonten()">Ubah Konten</button>
+    </div>
+
+    <!-- 3. MENGUBAH STYLING LANGSUNG -->
+    <div class="section">
+        <h2>3. Mengubah Styling Langsung</h2>
+        <div id="styleBox" class="demo-box">Box untuk styling</div>
+        <button onclick="ubahStyle()">Ubah Style Langsung</button>
+        <button onclick="resetStyle()">Reset Style</button>
+    </div>
+
+    <!-- 4. PENGGUNAAN CLASSLIST -->
+    <div class="section">
+        <h2>4. Penggunaan classList</h2>
+        <div id="classListBox" class="demo-box">Box untuk classList demo</div>
+        <button onclick="tambahClass()">Add Class</button>
+        <button onclick="hapusClass()">Remove Class</button>
+        <button onclick="toggleClass()">Toggle Class</button>
+        <button onclick="replaceClass()">Replace Class</button>
+        <button onclick="cekClass()">Contains Class?</button>
+    </div>
+
+    <!-- 5. EVENT LISTENER -->
+    <div class="section">
+        <h2>5. Event Listener</h2>
+        
+        <div class="demo-box">
+            <h3>Click Events</h3>
+            <button id="btnClick">Click Me</button>
+            <button id="btnDoubleClick">Double Click Me</button>
+            <div id="clickResult"></div>
+        </div>
+
+        <div class="demo-box">
+            <h3>Mouse Events</h3>
+            <div id="mouseBox" style="width: 200px; height: 100px; background: lightblue; text-align: center; line-height: 100px;">
+                Hover & Move Mouse
+            </div>
+            <div id="mouseResult"></div>
+        </div>
+
+        <div class="demo-box">
+            <h3>Keyboard Events</h3>
+            <input type="text" id="keyInput" placeholder="Ketik sesuatu..." />
+            <div id="keyResult"></div>
+        </div>
+
+        <div class="demo-box">
+            <h3>Form Events</h3>
+            <form id="demoForm">
+                <input type="text" id="formInput" placeholder="Nama" required />
+                <button type="submit">Submit</button>
+            </form>
+            <div id="formResult"></div>
+        </div>
+
+        <div class="demo-box">
+            <h3>Focus Events</h3>
+            <input type="text" id="focusInput" placeholder="Focus/Blur demo" />
+            <div id="focusResult"></div>
+        </div>
+
+        <div class="demo-box">
+            <h3>Multiple Listeners & Remove</h3>
+            <button id="multiBtn">Button dengan Multiple Listeners</button>
+            <button onclick="removeListeners()">Remove Listeners</button>
+            <div id="multiResult"></div>
+        </div>
+    </div>
+
+    <!-- 6. MANIPULASI ATRIBUT -->
+    <div class="section">
+        <h2>6. Manipulasi Atribut</h2>
+        <img id="demoImage" src="https://via.placeholder.com/150" alt="Demo Image" class="demo-box" />
+        <button onclick="ubahAtribut()">Ubah Atribut</button>
+        <button onclick="hapusAtribut()">Hapus Atribut</button>
+    </div>
+
+    <!-- 7. MEMBUAT & MENGHAPUS ELEMEN -->
+    <div class="section">
+        <h2>7. Membuat & Menghapus Elemen</h2>
+        <div id="container" class="demo-box"></div>
+        <button onclick="tambahElemen()">Tambah Elemen</button>
+        <button onclick="hapusElemen()">Hapus Elemen</button>
+    </div>
+
+    <!-- 8. TRAVERSING DOM -->
+    <div class="section">
+        <h2>8. Traversing DOM</h2>
+        <div id="parentBox" class="demo-box">
+            <div class="child">Child 1</div>
+            <div class="child" id="targetChild">Child 2 (Target)</div>
+            <div class="child">Child 3</div>
+        </div>
+        <button onclick="traverseDOM()">Traverse DOM</button>
+        <div id="traverseResult"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
